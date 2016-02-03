@@ -59,10 +59,6 @@ class Code:
         'JMP': '111'
     }
 
-
-
-
-
     #parameter: inputString - desired computation, output: code for the computation
     def comp(self, inputString):
         return self.compDictionary[inputString]

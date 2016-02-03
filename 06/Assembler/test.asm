@@ -1,0 +1,5 @@
+0;JMP
+M;JMP
+D+1;JMP
+D;JMP
+D
