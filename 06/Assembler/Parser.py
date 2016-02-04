@@ -12,7 +12,6 @@ class Parser:
     # files
     inputFile = None
     outputArray = []
-    outputFile = None
 
     # command types
     A_COMMAND = 0
@@ -32,6 +31,7 @@ class Parser:
         #initializes counters which we'll need later
         self.command = ''
         self.currentLineNumber = 0
+        self.code = Code()
 
     # checks if there are more commands to process
     def hasMoreCommands(self):
@@ -61,27 +61,59 @@ class Parser:
 
     # takes a clean array (no labels) and starts translating directly to machine code
     def translateToMachineCode(self, cleanArray):
+        # first three litters of CInstruction
+        cInstructionStarterString = "111"
+
         for line in cleanArray:
             if self.commandType(line) == self.A_COMMAND:
-                decimalValue = line.partition("@")[2]
+                decimalValueStr = line.partition("@")[2]
+                decimalValueInt = int(decimalValueStr)
+                binaryValue = "{0:015b}".format(decimalValueInt)
+                self.outputArray.append("0" + binaryValue)
 
-                self.outputArray.append(decimalValue)
             elif self.commandType(line) == self.C_COMMAND:
-                pass
+                # straight C command
+                if ("=" not in line) and (";" not in line):
+                    cBinaryString = self.code.comp(line)
+                    destString = self.code.dest("null")
+                    jumpString = self.code.jump("null")
+                    self.outputArray.append(cInstructionStarterString + \
+                                            cBinaryString + destString + jumpString)
+                # dest = comp command
+                elif ("=" in line) and (";" not in line):
+                    parsedOnEqual = line.partition("=")
+                    cBinaryString = self.code.comp(parsedOnEqual[2])
+                    destString = self.code.dest(parsedOnEqual[0])
+                    jumpString = self.code.jump("null")
+                    self.outputArray.append(cInstructionStarterString + \
+                                            cBinaryString + destString + jumpString)
+                # comp;JMP command
+                elif ("=" not in line) and (";" in line):
+                    parsedOnSemicolon = line.partition(";")
+                    cBinaryString = self.code.comp(parsedOnSemicolon[0])
+                    destString = self.code.dest("null")
+                    jumpString = self.code.jump(parsedOnSemicolon[2])
+                    self.outputArray.append(cInstructionStarterString + \
+                                            cBinaryString + destString + jumpString)
+                # dest = comp; jump
+                elif ("=" in line) and (";" in line):
+                    equalsIndex = line.index("=")
+                    semicolonIndex = line.index(";")
+                    cBinaryString = self.code.comp(line[equalsIndex+1:semicolonIndex])
+                    destString = self.code.dest(line[0:equalsIndex])
+                    jumpString = self.code.jump(line[semicolonIndex+1:len(line)])
+                    self.outputArray.append(cInstructionStarterString + \
+                                            cBinaryString + destString + jumpString)
+
             elif self.commandType(line) == self.L_COMMAND:
                 pass
         return self.outputArray
 
 
-# IF it's an @ statement
-    # take the numbers after and store to a new array
-# ELIF it's a command statement
-    #
-
-
 ##Main function
 # create new parser object
-newParser = Parser("testFile.in")
+testFile = "test.asm"
+newParser = Parser(testFile)
 
 # remove whitespace
 noCommentsArray = removeWhitespace.removeWhiteSpaceAndComments(newParser.linesArray)
@@ -90,4 +122,14 @@ atValueArray = newParser.translateToMachineCode(noCommentsArray)
 
 print(atValueArray)
 
+# debug length of commands
+# for line in atValueArray:
+#     print(len(line))
+
+#add array to new hackfile
+fileName = testFile.partition(".")
+outFile = fileName[0] + ".hack"
+with open(outFile, 'w') as outputFile:
+    for line in atValueArray:
+      outputFile.write(line + "\n")
 

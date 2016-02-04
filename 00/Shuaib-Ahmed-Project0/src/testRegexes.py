@@ -14,7 +14,7 @@ inputFile = open("testFile.in", 'r')
 ab = re.compile('@')
 
 for line in inputFile:
-	if result == ab.match(line):
+	if result = ab.match(line):
 		print (result)
 
 

@@ -2,14 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="bd8151cf-08d3-484b-b1e9-2813bf5bd484" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Assembler/practice regex.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Assembler/removeWhiteSpace.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../00/Shuaib-Ahmed-Project0/src/stripWhiteSpace.py" afterPath="$PROJECT_DIR$/../00/Shuaib-Ahmed-Project0/src/stripWhiteSpace.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/06.iml" afterPath="$PROJECT_DIR$/.idea/06.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../00/Shuaib-Ahmed-Project0/src/testRegexes.py" afterPath="$PROJECT_DIR$/../00/Shuaib-Ahmed-Project0/src/testRegexes.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Assembler/Assembler.py" afterPath="$PROJECT_DIR$/Assembler/Assembler.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Assembler/Code.py" afterPath="$PROJECT_DIR$/Assembler/Code.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Assembler/Parser.py" afterPath="$PROJECT_DIR$/Assembler/Parser.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Assembler/practice regex.py" afterPath="$PROJECT_DIR$/Assembler/practice regex.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Assembler/removeWhiteSpace.py" afterPath="$PROJECT_DIR$/Assembler/removeWhiteSpace.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Assembler/test.asm" afterPath="$PROJECT_DIR$/Assembler/test.asm" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pong/PongL.asm" afterPath="$PROJECT_DIR$/pong/PongL.asm" />
     </list>
     <ignored path="06.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -23,10 +23,10 @@
   </component>
   <component name="ChangesViewManager" flattened_view="true" show_ignored="false" />
   <component name="CoverageDataManager">
-    <SUITE FILE_PATH="coverage/06$practice_regex.coverage" NAME="practice regex Coverage Results" MODIFIED="1454559528150" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Assembler" />
+    <SUITE FILE_PATH="coverage/06$practice_regex.coverage" NAME="practice regex Coverage Results" MODIFIED="1454560928077" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Assembler" />
     <SUITE FILE_PATH="coverage/06$HelloWorld.coverage" NAME="HelloWorld Coverage Results" MODIFIED="1454479071798" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Assembler" />
-    <SUITE FILE_PATH="coverage/06$Parser.coverage" NAME="Parser Coverage Results" MODIFIED="1454560192162" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Assembler" />
-    <SUITE FILE_PATH="coverage/06$Assembler.coverage" NAME="Assembler Coverage Results" MODIFIED="1454527860647" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Assembler" />
+    <SUITE FILE_PATH="coverage/06$Parser.coverage" NAME="Parser Coverage Results" MODIFIED="1454567870199" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Assembler" />
+    <SUITE FILE_PATH="coverage/06$Assembler.coverage" NAME="Assembler Coverage Results" MODIFIED="1454560981407" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Assembler" />
     <SUITE FILE_PATH="coverage/06$Code.coverage" NAME="Code Coverage Results" MODIFIED="1454479801332" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Assembler" />
   </component>
   <component name="CreatePatchCommitExecutor">
@@ -38,21 +38,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
-      <file leaf-file-name="Assembler.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Assembler/Assembler.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="25" column="0" selection-start-line="9" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Parser.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Parser.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Assembler/Parser.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.2977528">
-              <caret line="33" column="34" selection-start-line="33" selection-start-column="34" selection-end-line="33" selection-end-column="34" />
+            <state vertical-scroll-proportion="-11.9375">
+              <caret line="133" column="35" selection-start-line="133" selection-start-column="35" selection-end-line="133" selection-end-column="35" />
               <folding>
                 <element signature="e#237#282#0" expanded="true" />
               </folding>
@@ -60,31 +50,31 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="removeWhiteSpace.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Assembler/removeWhiteSpace.py">
+      <file leaf-file-name="test.hack" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Assembler/test.hack">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="1" column="9" selection-start-line="1" selection-start-column="9" selection-end-line="1" selection-end-column="9" />
+            <state vertical-scroll-proportion="0.79858655">
+              <caret line="27483" column="0" selection-start-line="27483" selection-start-column="0" selection-end-line="27483" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="testFile.in" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Assembler/testFile.in">
+      <file leaf-file-name="PongL.asm" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/pong/PongL.asm">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="17" column="0" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
+              <caret line="27489" column="3" selection-start-line="27489" selection-start-column="3" selection-end-line="27489" selection-end-column="3" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Code.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Assembler/Code.py">
+      <file leaf-file-name="test.asm" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Assembler/test.asm">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="5" column="3" selection-start-line="5" selection-start-column="3" selection-end-line="5" selection-end-column="3" />
+              <caret line="27489" column="3" selection-start-line="27489" selection-start-column="3" selection-end-line="27489" selection-end-column="3" />
               <folding />
             </state>
           </provider>
@@ -94,7 +84,17 @@
         <entry file="file://$PROJECT_DIR$/Assembler/practice regex.py">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="5" column="37" selection-start-line="5" selection-start-column="6" selection-end-line="5" selection-end-column="37" />
+              <caret line="0" column="8" selection-start-line="0" selection-start-column="8" selection-end-line="0" selection-end-column="8" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Code.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Assembler/Code.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="21" column="25" selection-start-line="21" selection-start-column="25" selection-end-line="21" selection-end-column="25" />
               <folding />
             </state>
           </provider>
@@ -116,7 +116,6 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/Assembler/HelloWorld.py" />
-        <option value="$PROJECT_DIR$/Assembler/Code.py" />
         <option value="$PROJECT_DIR$/Assembler.py" />
         <option value="$PROJECT_DIR$/Code.py" />
         <option value="$PROJECT_DIR$/Parser.py" />
@@ -124,8 +123,12 @@
         <option value="$PROJECT_DIR$/Assembler/Assembler.py" />
         <option value="$PROJECT_DIR$/Assembler/removeWhiteSpace.py" />
         <option value="$PROJECT_DIR$/Assembler/practice regex.py" />
+        <option value="$PROJECT_DIR$/Assembler/Code.py" />
         <option value="$PROJECT_DIR$/Assembler/testFile.in" />
         <option value="$PROJECT_DIR$/Assembler/Parser.py" />
+        <option value="$PROJECT_DIR$/Assembler/test.hack" />
+        <option value="$PROJECT_DIR$/Assembler/test.asm" />
+        <option value="$PROJECT_DIR$/pong/PongL.asm" />
       </list>
     </option>
   </component>
@@ -136,7 +139,7 @@
   </component>
   <component name="ProjectFrameBounds">
     <option name="x" value="68" />
-    <option name="y" value="112" />
+    <option name="y" value="228" />
     <option name="width" value="1365" />
     <option name="height" value="813" />
   </component>
@@ -193,6 +196,20 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="pong" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="06" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="06" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="add" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -219,7 +236,7 @@
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="settings.editor.selected.configurable" value="preferences.keymap" />
+    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
     <property name="settings.editor.splitter.proportion" value="0.2" />
     <property name="js-jscs-nodeInterpreter" value="/usr/local/bin/node" />
     <property name="last_opened_file_path" value="/usr/local/bin/python3.5" />
@@ -518,8 +535,8 @@
     <recent_temporary>
       <list size="5">
         <item index="0" class="java.lang.String" itemvalue="Python.Parser" />
-        <item index="1" class="java.lang.String" itemvalue="Python.practice regex" />
-        <item index="2" class="java.lang.String" itemvalue="Python.Assembler" />
+        <item index="1" class="java.lang.String" itemvalue="Python.Assembler" />
+        <item index="2" class="java.lang.String" itemvalue="Python.practice regex" />
         <item index="3" class="java.lang.String" itemvalue="Python.Code" />
         <item index="4" class="java.lang.String" itemvalue="Python.HelloWorld" />
       </list>
@@ -539,18 +556,18 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="68" y="112" width="1365" height="813" extended-state="0" />
+    <frame x="68" y="228" width="1365" height="813" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.1978022" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32869565" sideWeight="0.5037037" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.18417463" sideWeight="0.4962963" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -575,7 +592,7 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="1" />
+      <option name="time" value="6" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -632,16 +649,16 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Assembler/Assembler.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
+        <state vertical-scroll-proportion="0.6713781">
           <caret line="25" column="0" selection-start-line="9" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Assembler/test.asm">
+    <entry file="file://$PROJECT_DIR$/Assembler/removeWhiteSpace.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.90636045">
+          <caret line="27" column="0" selection-start-line="27" selection-start-column="0" selection-end-line="27" selection-end-column="0" />
           <folding />
         </state>
       </provider>
@@ -649,7 +666,15 @@
     <entry file="file://$PROJECT_DIR$/Assembler/practice regex.py">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="5" column="37" selection-start-line="5" selection-start-column="6" selection-end-line="5" selection-end-column="37" />
+          <caret line="0" column="8" selection-start-line="0" selection-start-column="8" selection-end-line="0" selection-end-column="8" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assembler/testFile.in">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.40282685">
+          <caret line="12" column="3" selection-start-line="12" selection-start-column="3" selection-end-line="12" selection-end-column="3" />
           <folding />
         </state>
       </provider>
@@ -657,34 +682,58 @@
     <entry file="file://$PROJECT_DIR$/Assembler/Code.py">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="5" column="3" selection-start-line="5" selection-start-column="3" selection-end-line="5" selection-end-column="3" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Assembler/testFile.in">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="17" column="0" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Assembler/removeWhiteSpace.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="1" column="9" selection-start-line="1" selection-start-column="9" selection-end-line="1" selection-end-column="9" />
+          <caret line="21" column="25" selection-start-line="21" selection-start-column="25" selection-end-line="21" selection-end-column="25" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Assembler/Parser.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.2977528">
-          <caret line="33" column="34" selection-start-line="33" selection-start-column="34" selection-end-line="33" selection-end-column="34" />
+        <state vertical-scroll-proportion="-11.9375">
+          <caret line="133" column="35" selection-start-line="133" selection-start-column="35" selection-end-line="133" selection-end-column="35" />
           <folding>
             <element signature="e#237#282#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/add/Add.asm">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="12" selection-end-column="3" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pong/Pong.asm">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pong/PongL.asm">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="27489" column="3" selection-start-line="27489" selection-start-column="3" selection-end-line="27489" selection-end-column="3" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assembler/test.asm">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="27489" column="3" selection-start-line="27489" selection-start-column="3" selection-end-line="27489" selection-end-column="3" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assembler/test.hack">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.79858655">
+          <caret line="27483" column="0" selection-start-line="27483" selection-start-column="0" selection-end-line="27483" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>

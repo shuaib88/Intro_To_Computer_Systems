@@ -18,7 +18,6 @@ class removeWhitespace:
                 line = line.rstrip()
                 newLine = re.sub(r"[ \t\v\n]", "", line)
                 outputArray.append(newLine)
-                print(outputArray)
 
             else:
                 if line == "\n" or line == "\r":
@@ -26,6 +25,5 @@ class removeWhitespace:
                 else:
                     newLine = re.sub(r"[ \t\v\n]", "", line)
                     outputArray.append(newLine)
-                    print(outputArray)
 
         return outputArray
