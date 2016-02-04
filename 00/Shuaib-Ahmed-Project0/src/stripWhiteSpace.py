@@ -61,7 +61,7 @@ elif len(sys.argv) == 3:
 			elif "//" in line:
 				line = line.partition('//')[0]
 				line = line.rstrip()
-				newLine = re.sub(r"[ \t\v]", "", line)
+				newLine = re.sub(r"[ \t\v\n]", "", line)
 				outputFile.write(newLine)
 
 			else:
