@@ -21,6 +21,10 @@ class Parser:
     # regexes
     code = Code()
 
+    # symbol table
+    symbolTable = {}
+    symbolMemoryAddress = 16
+
     # Initializer prepares a fresh array
     def __init__(self, inputFile):
 
@@ -56,8 +60,56 @@ class Parser:
         if line.startswith("@"):
             return self.A_COMMAND
 
+        elif line.startswith("(") and line.endswith(")"):
+            return self.L_COMMAND
+
         else:
             return self.C_COMMAND
+
+    def stripLabels(self, cleanArray):
+        labelStrippedArray = []
+        for line in cleanArray:
+            #for label declarations
+            if self.commandType(line) == 2:
+                label = line[1:-1]
+                if label in self.symbolTable:
+                    pass
+                else:
+                    self.symbolTable[label] = self.currentLineNumber
+
+            # if neither of two add to
+            else:
+                labelStrippedArray.append(line)
+                self.currentLineNumber += 1
+            print(self.currentLineNumber)
+        return labelStrippedArray
+    # for processing and replacing @symbols with correct addresses
+    def replaceAtDeclarations(self, labelStrippedArray):
+        pureAssembyArray = []
+        for line in labelStrippedArray:
+            # if an @symbol command
+            if self.commandType(line) == 0 and re.search('[A-Za-z_.$:]', line[1]):
+                symbol = line.partition("@")[2]
+                # for symbols in the table swap symbolic address with numeric address
+                if symbol in self.symbolTable:
+                    symbolAddress = self.symbolTable[symbol]
+                    symbolAddressString = str(symbolAddress)
+                    print("symbolTable Value")
+                    print(type(self.symbolTable[symbol]))
+                    replacedLine = "@" + symbolAddressString
+                    pureAssembyArray.append(replacedLine)
+                    self.currentLineNumber += 1
+                #for symbols not in the table they must be var addresses, address them
+                else:
+                    self.symbolTable[symbol] = self.symbolMemoryAddress
+                    symbolAddressString = str(self.symbolMemoryAddress)
+                    self.symbolMemoryAddress += 1
+                    replacedLine = "@" + symbolAddressString
+                    pureAssembyArray.append(replacedLine)
+            else:
+                pureAssembyArray.append(line)
+        return pureAssembyArray
+
 
     # takes a clean array (no labels) and starts translating directly to machine code
     def translateToMachineCode(self, cleanArray):
@@ -118,13 +170,40 @@ newParser = Parser(testFile)
 # remove whitespace
 noCommentsArray = removeWhitespace.removeWhiteSpaceAndComments(newParser.linesArray)
 
-atValueArray = newParser.translateToMachineCode(noCommentsArray)
+# print("white spaced removed:")
+# print(noCommentsArray)
 
+#remove label, populate symbol table
+labelStrippedArray = newParser.stripLabels(noCommentsArray)
+
+print("label stripped")
+print(labelStrippedArray)
+
+print("symbol table after label stripped")
+print(newParser.symbolTable)
+
+#replace @symbols with proper numerical addresses
+cleanArray = newParser.replaceAtDeclarations(labelStrippedArray)
+
+print("clean array")
+print(cleanArray)
+
+print("symbol table after @declarations replaced")
+print(newParser.symbolTable)
+
+
+#translate clean code to machine code
+atValueArray = newParser.translateToMachineCode(cleanArray)
+
+print("cleaned code:")
 print(atValueArray)
+
+
 
 # debug length of commands
 # for line in atValueArray:
 #     print(len(line))
+
 
 #add array to new hackfile
 fileName = testFile.partition(".")
