@@ -6,7 +6,9 @@ import os
 
 from Parser import Parser
 
-from removeWhiteSpace import removeWhitespace
+from RemoveWhiteSpace import RemoveWhitespace
+
+
 
 #extract filename and root from filename
 script, inputFilename = sys.argv
@@ -18,11 +20,10 @@ outFile = rootName + ".hack"
 
 ##Main function
 # create new parser object
-testFile = "test.asm"
 newParser = Parser(inputFilename)
 
 # remove whitespace
-noCommentsArray = removeWhitespace.removeWhiteSpaceAndComments(newParser.linesArray)
+noCommentsArray = RemoveWhitespace.removeWhiteSpaceAndComments(newParser.linesArray)
 
 #remove label, populate symbol table
 labelStrippedArray = newParser.stripLabels(noCommentsArray)

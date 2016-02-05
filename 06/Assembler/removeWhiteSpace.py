@@ -1,6 +1,6 @@
 #removes whitespace
 import re
-class removeWhitespace:
+class RemoveWhitespace:
 
     #remove white space and Comments from an inputArray and drops into a new array.
     @staticmethod
