@@ -1,15 +1,14 @@
 # Parser: Encapsulates access to the input code. Reads an assembly language
 # com- mand, parses it, and provides convenient access to the
 # command’s components (fields and symbols). In addition, removes
-# all white space and comments.
+# all white space and comments. Includes symbol table
 
-from removeWhiteSpace import removeWhitespace
 import re
 from Code import Code
 
 class Parser:
 
-    # files
+    # file read write related
     inputFile = None
     outputArray = []
 
@@ -18,11 +17,16 @@ class Parser:
     C_COMMAND = 1
     L_COMMAND = 2
 
-    # regexes
+    # intialize code class with codes and methods for calculations, destination and jump
     code = Code()
 
-    # symbol table
-    symbolTable = {}
+    # symbol table attribution https://github.com/davidbrenner/nand2tetris/blob/master/06/SymbolTable.py
+    symbolTable = {
+            'SP': 0, 'LCL':1, 'ARG':2, 'THIS':3, 'THAT':4,
+            'R0':0, 'R1':1, 'R2':2, 'R3':3, 'R4':4, 'R5':5, 'R6':6, 'R7':7,
+            'R8':8, 'R9':9, 'R10':10, 'R11':11, 'R12':12, 'R13':13, 'R14':14,
+            'R15':15, 'SCREEN':16384, 'KBD':24576}
+
     symbolMemoryAddress = 16
 
     # Initializer prepares a fresh array
@@ -81,7 +85,6 @@ class Parser:
             else:
                 labelStrippedArray.append(line)
                 self.currentLineNumber += 1
-            print(self.currentLineNumber)
         return labelStrippedArray
     # for processing and replacing @symbols with correct addresses
     def replaceAtDeclarations(self, labelStrippedArray):
@@ -94,8 +97,6 @@ class Parser:
                 if symbol in self.symbolTable:
                     symbolAddress = self.symbolTable[symbol]
                     symbolAddressString = str(symbolAddress)
-                    print("symbolTable Value")
-                    print(type(self.symbolTable[symbol]))
                     replacedLine = "@" + symbolAddressString
                     pureAssembyArray.append(replacedLine)
                     self.currentLineNumber += 1
@@ -111,7 +112,7 @@ class Parser:
         return pureAssembyArray
 
 
-    # takes a clean array (no labels) and starts translating directly to machine code
+    # takes a clean array (no labels, no @symbols) and starts translating directly to machine code
     def translateToMachineCode(self, cleanArray):
         # first three litters of CInstruction
         cInstructionStarterString = "111"
@@ -160,55 +161,3 @@ class Parser:
             elif self.commandType(line) == self.L_COMMAND:
                 pass
         return self.outputArray
-
-
-##Main function
-# create new parser object
-testFile = "test.asm"
-newParser = Parser(testFile)
-
-# remove whitespace
-noCommentsArray = removeWhitespace.removeWhiteSpaceAndComments(newParser.linesArray)
-
-# print("white spaced removed:")
-# print(noCommentsArray)
-
-#remove label, populate symbol table
-labelStrippedArray = newParser.stripLabels(noCommentsArray)
-
-print("label stripped")
-print(labelStrippedArray)
-
-print("symbol table after label stripped")
-print(newParser.symbolTable)
-
-#replace @symbols with proper numerical addresses
-cleanArray = newParser.replaceAtDeclarations(labelStrippedArray)
-
-print("clean array")
-print(cleanArray)
-
-print("symbol table after @declarations replaced")
-print(newParser.symbolTable)
-
-
-#translate clean code to machine code
-atValueArray = newParser.translateToMachineCode(cleanArray)
-
-print("cleaned code:")
-print(atValueArray)
-
-
-
-# debug length of commands
-# for line in atValueArray:
-#     print(len(line))
-
-
-#add array to new hackfile
-fileName = testFile.partition(".")
-outFile = fileName[0] + ".hack"
-with open(outFile, 'w') as outputFile:
-    for line in atValueArray:
-      outputFile.write(line + "\n")
-

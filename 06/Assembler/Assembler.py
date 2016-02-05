@@ -1,34 +1,39 @@
-from Code import Code
+#this file drives the whole assembler and uses the other included packages
 
-class Assembler():
+import sys
 
-    def __init(self, inputFile):
-        pass
+import os
 
+from Parser import Parser
 
+from removeWhiteSpace import removeWhitespace
 
-# strip white space and comments
-for line in inputFile:
-    if line.startswith("//"):
-        pass
+#extract filename and root from filename
+script, inputFilename = sys.argv
+rootName = os.path.splitext(inputFilename)[0]
+print(rootName)
 
-    elif "//" in line:
-        line = line.partition('//')[0]
-        line = line.rstrip()
-        newLine = re.sub(r"[ \t\v\n]", "", line)
-        outputFile.write(newLine)
+#declare output file path
+outFile = rootName + ".hack"
 
-    else:
-        if line == "\n" or line == "\r":
-            pass
-        else:
-            newLine = re.sub(r"[ \t\v]", "", line)
-            outputFile.write(newLine)
+##Main function
+# create new parser object
+testFile = "test.asm"
+newParser = Parser(inputFilename)
 
-## get symbols
+# remove whitespace
+noCommentsArray = removeWhitespace.removeWhiteSpaceAndComments(newParser.linesArray)
 
+#remove label, populate symbol table
+labelStrippedArray = newParser.stripLabels(noCommentsArray)
 
-## actually build the correct code
+#replace @symbols with proper numerical addresses
+cleanArray = newParser.replaceAtDeclarations(labelStrippedArray)
 
+#translate clean code to machine code
+atValueArray = newParser.translateToMachineCode(cleanArray)
 
-## run
+#add array to new hack file in same path as input
+with open(outFile, 'w') as outputFile:
+    for line in atValueArray:
+      outputFile.write(line + "\n")
