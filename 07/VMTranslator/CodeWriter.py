@@ -27,8 +27,11 @@ class CodeWriter:
             outputArray.append("D=M")
             outputArray.append("A=A-1")
             outputArray.append("M=M-D")
-        elif line.startswith("neg"):
-            pass
+        elif line.startswith("neg"): # whatever is in y, make it -y
+            outputArray.append("D=0")
+            outputArray.append("@SP") # call stack pointer
+            outputArray.append("A=M-1") # derefrence SP; point to y
+            outputArray.append("M=D-M") # negate y by subtracting
         elif line.startswith("eq"):
             outputArray.append("@SP")
             outputArray.append("AM=M-1") #decrement SP and dereference
@@ -87,13 +90,23 @@ class CodeWriter:
             outputArray.append("(CONTINUE" + str(self.labelCounter) + ")")
             self.labelCounter += 1 #increment the number
         elif line.startswith("and"):
-            pass
+            outputArray.append("@SP") #initialize SP
+            outputArray.append("AM=M-1") # dereference and decrement SP
+            outputArray.append("D=M") # store y value
+            outputArray.append("A=A-1") # point at x
+            outputArray.append("M=D&M") # store result of y&x at x
         elif line.startswith("or"):
-            pass
-        elif line.startswith("not"):
-            pass
+            outputArray.append("@SP") #initialize SP
+            outputArray.append("AM=M-1") # dereference and decrement SP
+            outputArray.append("D=M") # store y value
+            outputArray.append("A=A-1") # point at x
+            outputArray.append("M=D|M") # store result of y or x at x
+        elif line.startswith("not"): # pop x push !x
+            outputArray.append("@SP") #point at SP
+            outputArray.append("A=M-1") # dereference SP
+            outputArray.append("M=!M") # invert the value
         else:
-            outputArray.append("ERROR")
+            outputArray.append("@1111")
 
 
     # write push/

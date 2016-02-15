@@ -2,13 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7322f1d3-e113-4079-b299-1c081d07b9af" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/StackArithmetic/SimpleAdd/SimpleAdd.asm" afterPath="$PROJECT_DIR$/StackArithmetic/SimpleAdd/SimpleAdd.asm" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/StackArithmetic/StackTest/StackTest.asm" afterPath="$PROJECT_DIR$/StackArithmetic/StackTest/StackTest.asm" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/StackArithmetic/StackTest/StackTest.out" afterPath="$PROJECT_DIR$/StackArithmetic/StackTest/StackTest.out" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/VMTranslator/CodeWriter.py" afterPath="$PROJECT_DIR$/VMTranslator/CodeWriter.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/VMTranslator/Parser.py" afterPath="$PROJECT_DIR$/VMTranslator/Parser.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/VMTranslator/Test.asm" afterPath="$PROJECT_DIR$/VMTranslator/Test.asm" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/VMTranslator/Test.vm" afterPath="$PROJECT_DIR$/VMTranslator/Test.vm" />
     </list>
     <ignored path="07.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -22,7 +18,7 @@
   </component>
   <component name="ChangesViewManager" flattened_view="true" show_ignored="false" />
   <component name="CoverageDataManager">
-    <SUITE FILE_PATH="coverage/07$Parser.coverage" NAME="Parser Coverage Results" MODIFIED="1455518960947" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/VMTranslator" />
+    <SUITE FILE_PATH="coverage/07$Parser.coverage" NAME="Parser Coverage Results" MODIFIED="1455522571506" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/VMTranslator" />
   </component>
   <component name="CreatePatchCommitExecutor">
     <option name="PATCH_PATH" value="" />
@@ -33,20 +29,10 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="Test.vm" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/VMTranslator/Test.vm">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-4.6060605">
-              <caret line="8" column="3" selection-start-line="8" selection-start-column="3" selection-end-line="8" selection-end-column="3" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="StackTest.vm" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/StackArithmetic/StackTest/StackTest.vm">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-8.060606">
+            <state vertical-scroll-proportion="6.909091">
               <caret line="14" column="16" selection-start-line="14" selection-start-column="16" selection-end-line="14" selection-end-column="16" />
               <folding />
             </state>
@@ -73,11 +59,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="StackTest.asm" pinned="false" current-in-tab="false">
+      <file leaf-file-name="StackTest.asm" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/StackArithmetic/StackTest/StackTest.asm">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="144" column="0" selection-start-line="93" selection-start-column="0" selection-end-line="93" selection-end-column="4" />
+            <state vertical-scroll-proportion="0.7185185">
+              <caret line="340" column="4" selection-start-line="340" selection-start-column="4" selection-end-line="340" selection-end-column="4" />
               <folding />
             </state>
           </provider>
@@ -95,11 +81,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="CodeWriter.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="CodeWriter.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/VMTranslator/CodeWriter.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.5217391">
-              <caret line="57" column="37" selection-start-line="57" selection-start-column="37" selection-end-line="57" selection-end-column="37" />
+            <state vertical-scroll-proportion="0.0">
+              <caret line="106" column="57" selection-start-line="106" selection-start-column="57" selection-end-line="106" selection-end-column="57" />
               <folding />
             </state>
           </provider>
@@ -141,6 +127,7 @@
         <option value="$PROJECT_DIR$/VMTranslator/Test.asm" />
         <option value="$PROJECT_DIR$/VMTranslator/Parser.py" />
         <option value="$PROJECT_DIR$/VMTranslator/CodeWriter.py" />
+        <option value="$PROJECT_DIR$/StackArithmetic/StackTest/StackTest.asm" />
       </list>
     </option>
   </component>
@@ -150,9 +137,9 @@
     <detection-done>true</detection-done>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="107" />
-    <option name="y" value="66" />
-    <option name="width" value="941" />
+    <option name="x" value="395" />
+    <option name="y" value="23" />
+    <option name="width" value="911" />
     <option name="height" value="744" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
@@ -492,10 +479,10 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="107" y="66" width="941" height="744" extended-state="0" />
+    <frame x="395" y="23" width="911" height="744" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.23698193" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24478595" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
@@ -589,18 +576,34 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/StackArithmetic/StackTest/StackTest.asm">
+    <entry file="file://$PROJECT_DIR$/StackArithmetic/StackTest/StackTestVME.tst">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="144" column="0" selection-start-line="93" selection-start-column="0" selection-end-line="93" selection-end-column="4" />
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/StackArithmetic/StackTest/StackTest.cmp">
+    <entry file="file://$PROJECT_DIR$/VMTranslator/CodeWriter.py">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <caret line="106" column="57" selection-start-line="106" selection-start-column="57" selection-end-line="106" selection-end-column="57" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/VMTranslator/Test.vm">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.37623763">
+          <caret line="8" column="3" selection-start-line="8" selection-start-column="3" selection-end-line="8" selection-end-column="3" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/StackArithmetic/StackTest/StackTest.vm">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="6.909091">
+          <caret line="14" column="16" selection-start-line="14" selection-start-column="16" selection-end-line="14" selection-end-column="16" />
           <folding />
         </state>
       </provider>
@@ -613,23 +616,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/StackArithmetic/StackTest/StackTest.vm">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-8.060606">
-          <caret line="14" column="16" selection-start-line="14" selection-start-column="16" selection-end-line="14" selection-end-column="16" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/VMTranslator/Test.vm">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-4.6060605">
-          <caret line="8" column="3" selection-start-line="8" selection-start-column="3" selection-end-line="8" selection-end-column="3" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/StackArithmetic/StackTest/StackTestVME.tst">
+    <entry file="file://$PROJECT_DIR$/StackArithmetic/StackTest/StackTest.cmp">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
@@ -637,10 +624,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/VMTranslator/CodeWriter.py">
+    <entry file="file://$PROJECT_DIR$/StackArithmetic/StackTest/StackTest.asm">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.5217391">
-          <caret line="57" column="37" selection-start-line="57" selection-start-column="37" selection-end-line="57" selection-end-column="37" />
+        <state vertical-scroll-proportion="0.7185185">
+          <caret line="340" column="4" selection-start-line="340" selection-start-column="4" selection-end-line="340" selection-end-column="4" />
           <folding />
         </state>
       </provider>
