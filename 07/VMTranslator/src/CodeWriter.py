@@ -160,7 +160,6 @@ class CodeWriter:
                 outputArray.append("D=M") # D holds the value of the top item on the stack
                 outputArray.append("@" + str(self.segmentDictionary[segment] + int(index))) #initialize address of temp + index
                 outputArray.append("M=D") # place value in correct segment
-                print("made it to temp")
             elif segment == "static":
                 outputArray.append("@SP")
                 outputArray.append("AM=M-1") # decrement SP and dereference
@@ -184,7 +183,6 @@ class CodeWriter:
                 outputArray.append("M=M+1") # increment SP
             elif segment == "temp" or segment == "pointer":
                 outputArray.append("@" + str(self.segmentDictionary[segment] + int(index))) #initialize address of temp + index
-                print("@" + str(self.segmentDictionary[segment] + int(index)))
                 outputArray.append("D=M") # D holds contents of segment[index]
                 outputArray.append("@SP")
                 outputArray.append("A=M") # dereference SP
