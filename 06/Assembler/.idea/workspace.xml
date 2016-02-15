@@ -47,8 +47,8 @@
       <file leaf-file-name="Parser.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Parser.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.30727023">
-              <caret line="62" column="32" selection-start-line="62" selection-start-column="32" selection-end-line="62" selection-end-column="32" />
+            <state vertical-scroll-proportion="0.33333334">
+              <caret line="98" column="46" selection-start-line="98" selection-start-column="42" selection-end-line="98" selection-end-column="46" />
               <folding>
                 <element signature="e#259#268#0" expanded="true" />
               </folding>
@@ -224,8 +224,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Parser.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.30727023">
-          <caret line="62" column="32" selection-start-line="62" selection-start-column="32" selection-end-line="62" selection-end-column="32" />
+        <state vertical-scroll-proportion="0.33333334">
+          <caret line="98" column="46" selection-start-line="98" selection-start-column="42" selection-end-line="98" selection-end-column="46" />
           <folding>
             <element signature="e#259#268#0" expanded="true" />
           </folding>

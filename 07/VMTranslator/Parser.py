@@ -1,6 +1,7 @@
 import sys
 import os
 from RemoveWhitespace import RemoveWhitespace
+from CodeWriter import CodeWriter
 
 import re
 
@@ -9,6 +10,9 @@ class Parser:
     # file read write related
     inputFile = None
     outputArray = []
+
+    # code writer object
+    newCodeWriter = CodeWriter()
 
     # command types
     C_ARITHMETIC = 0
@@ -28,7 +32,6 @@ class Parser:
         # transforms file into a list of lines
         with open(inputFile, 'r') as initializedFile:
             self.linesArray = initializedFile.readlines()
-
 
     # checks if there are more commands to process
     def hasMoreCommands(self):
@@ -54,9 +57,13 @@ class Parser:
     def translateVMtoASM(self, commentStrippedArray):
         for line in commentStrippedArray:
             if self.commandType(line) == self.C_ARITHMETIC:
-                self.outputArray.append("ARITHMETIC")
+                self.newCodeWriter.writeArithmetic(line, self.outputArray)
             elif self.commandType(line) == self.C_PUSH:
-                self.outputArray.append("PUSH")
+                parsedLine = line.split()
+                command = self.commandType(parsedLine[0])
+                segment = parsedLine[1]
+                index = parsedLine[2]
+                self.newCodeWriter.writePushPop(command, segment, index, self.outputArray)
             elif self.commandType(line) == self.C_POP:
                 self.outputArray.append("POP")
             else:
@@ -68,7 +75,7 @@ class Parser:
 
 #extract filename and root from filename
 # script, inputFilename = sys.argv
-inputFilename = "Test.vm"
+inputFilename = "/Users/shuaibahmed/Code/Intro_Computer_Sys/nand2tetris/projects/07/StackArithmetic/StackTest/StackTest.vm"
 rootName = os.path.splitext(inputFilename)[0]
 
 #declare output file path
