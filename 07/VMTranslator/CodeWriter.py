@@ -7,11 +7,32 @@ class CodeWriter:
     # dictionary stores the # of times any label having arguments are used
     labelCounter = 0
 
+    # command types
+    C_ARITHMETIC = 0
+    C_PUSH = 1
+    C_POP = 2
+
+    # function basename for static variable
+    fileBasename = None
+
+    # dictionary with translation of segment names
+    segmentDictionary = {
+        "local" : "LCL",
+        "argument" : "ARG",
+        "this" : "THIS",
+        "that" : "THAT",
+        "temp" : 5,
+        "pointer" : 3
+    }
+
     # in case i want to rewrite this to have CodeWriter write directly to file
     # def __init__(self, outputFilePath):
     #
     #     # transforms file into a list of lines
     #     outputFile = open(outputFilePath, 'w')
+
+    def takesFunctionName(self, fileBasename):
+        self.fileBasename = fileBasename
 
     # writes assembly code for all the arithmetic operations
     def writeArithmetic(self, line, outputArray):
@@ -106,7 +127,7 @@ class CodeWriter:
             outputArray.append("A=M-1") # dereference SP
             outputArray.append("M=!M") # invert the value
         else:
-            outputArray.append("@1111")
+            outputArray.append("@2222") # this is my error code
 
 
     # write push/
@@ -119,5 +140,66 @@ class CodeWriter:
             outputArray.append("M=D") # store value in stack
             outputArray.append("@SP") # advance SP
             outputArray.append("M=M+1")
+        elif command == self.C_POP:
+            if segment == "local" or segment == "argument" or segment == "this" or segment == "that":
+                outputArray.append("@" + self.segmentDictionary[segment]) # point at segment base
+                outputArray.append("D=M") # get base address of segment
+                outputArray.append("@" + str(index)) #initialize given number
+                outputArray.append("D=D+A") # D holds address of RAM location segment[x]
+                outputArray.append("@R13") # get temporary address
+                outputArray.append("M=D") # put address of segment[x] into a temporary memory location
+                outputArray.append("@SP")
+                outputArray.append("AM=M-1") # decrement SP and dereference
+                outputArray.append("D=M") # D holds the value of the top item on the stack
+                outputArray.append("@R13")
+                outputArray.append("A=M") # A holds the address of RAM location argument 2 (dereference ptr)
+                outputArray.append("M=D") # RAM location argument 2 holds what was on the top of the stack
+            elif segment == "temp" or segment == "pointer":
+                outputArray.append("@SP")
+                outputArray.append("AM=M-1") # decrement SP and dereference
+                outputArray.append("D=M") # D holds the value of the top item on the stack
+                outputArray.append("@" + str(self.segmentDictionary[segment] + int(index))) #initialize address of temp + index
+                outputArray.append("M=D") # place value in correct segment
+                print("made it to temp")
+            elif segment == "static":
+                outputArray.append("@SP")
+                outputArray.append("AM=M-1") # decrement SP and dereference
+                outputArray.append("D=M") # D holds the value of the top item on the stack
+                outputArray.append("@" + self.fileBasename + "." + str(index))
+                outputArray.append("M=D")
+            else:
+                outputArray.append("@4444")
+        #put contents of RAM location segment[x]onto the stack
+        elif command == self.C_PUSH:
+            if segment == "local" or segment == "argument" or segment == "this" or segment == "that":
+                outputArray.append("@" + self.segmentDictionary[segment])
+                outputArray.append("D=M")
+                outputArray.append("@" + str(index))
+                outputArray.append("A=D+A") # A holds address of segment[x]
+                outputArray.append("D=M") # D holds contents of local 3
+                outputArray.append("@SP")
+                outputArray.append("A=M") # dereference SP
+                outputArray.append("M=D") # put D (contents of local 3) on stack
+                outputArray.append("@SP")
+                outputArray.append("M=M+1") # increment SP
+            elif segment == "temp" or segment == "pointer":
+                outputArray.append("@" + str(self.segmentDictionary[segment] + int(index))) #initialize address of temp + index
+                print("@" + str(self.segmentDictionary[segment] + int(index)))
+                outputArray.append("D=M") # D holds contents of segment[index]
+                outputArray.append("@SP")
+                outputArray.append("A=M") # dereference SP
+                outputArray.append("M=D") # put D (contents of local 3) on stack
+                outputArray.append("@SP")
+                outputArray.append("M=M+1") # increment SP
+            elif segment == "static":
+                outputArray.append("@" + self.fileBasename + "." + str(index)) # constructed correct symbol name
+                outputArray.append("D=M") # store saved value in register
+                outputArray.append("@SP")
+                outputArray.append("A=M") # dereference SP
+                outputArray.append("M=D") # put D (contents of local 3) on stack
+                outputArray.append("@SP")
+                outputArray.append("M=M+1") # increment SP
+            else:
+                outputArray.append("@6666")
         else:
-            outputArray.append("ERROR")
+            outputArray.append("@7777")

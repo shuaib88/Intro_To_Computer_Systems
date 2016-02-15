@@ -33,6 +33,13 @@ class Parser:
         with open(inputFile, 'r') as initializedFile:
             self.linesArray = initializedFile.readlines()
 
+        #attempting to pass a file name to a coder object
+        baseName = os.path.splitext(os.path.basename(os.path.normpath(inputFilename)))[0]
+
+        #attempting to pass baseName to the coder object
+        self.newCodeWriter.takesFunctionName(baseName)
+        print(self.newCodeWriter.fileBasename)
+
     # checks if there are more commands to process
     def hasMoreCommands(self):
         if self.currentLineNumber - 1 < len(self.linesArray):
@@ -58,14 +65,12 @@ class Parser:
         for line in commentStrippedArray:
             if self.commandType(line) == self.C_ARITHMETIC:
                 self.newCodeWriter.writeArithmetic(line, self.outputArray)
-            elif self.commandType(line) == self.C_PUSH:
+            elif self.commandType(line) == self.C_PUSH or self.C_POP:
                 parsedLine = line.split()
-                command = self.commandType(parsedLine[0])
+                command = self.commandType(line)
                 segment = parsedLine[1]
                 index = parsedLine[2]
                 self.newCodeWriter.writePushPop(command, segment, index, self.outputArray)
-            elif self.commandType(line) == self.C_POP:
-                self.outputArray.append("POP")
             else:
                 self.outputArray.append("ERROR")
         return self.outputArray
@@ -75,8 +80,11 @@ class Parser:
 
 #extract filename and root from filename
 # script, inputFilename = sys.argv
-inputFilename = "/Users/shuaibahmed/Code/Intro_Computer_Sys/nand2tetris/projects/07/StackArithmetic/StackTest/StackTest.vm"
+inputFilename = "/Users/shuaibahmed/Code/Intro_Computer_Sys/nand2tetris/projects/07/MemoryAccess/StaticTest/StaticTest.vm"
 rootName = os.path.splitext(inputFilename)[0]
+# get basename for CodeWriter's use
+baseName = os.path.splitext(os.path.basename(os.path.normpath(inputFilename)))[0]
+print(baseName)
 
 #declare output file path
 outFile = rootName + ".asm"
