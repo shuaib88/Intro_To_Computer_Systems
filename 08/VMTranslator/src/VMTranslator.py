@@ -12,7 +12,7 @@ from CodeWriter import CodeWriter
 
 #extract filename and root from filename
 # script, inputFilename = sys.argv
-inputFilename = "/Users/shuaibahmed/Code/Intro_Computer_Sys/nand2tetris/projects/07/StackArithmetic/SimpleAdd/SimpleAdd.vm"
+inputFilename = "/Users/shuaibahmed/Code/Intro_Computer_Sys/nand2tetris/projects/08/ProgramFlow/FibonacciSeries/FibonacciSeries.vm"
 rootName = os.path.splitext(inputFilename)[0]
 # get basename for CodeWriter's use
 
