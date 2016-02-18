@@ -11,9 +11,6 @@ class Parser:
     inputFile = None
     outputArray = []
 
-    # code writer object
-    # newCodeWriter = CodeWriter()
-
     # code writer
     codeWriter = None
 
@@ -54,25 +51,18 @@ class Parser:
     # returns the command type of the line
     # this week it's arithmetic push or pop
     def commandType(self, line):
-        # print("commandTypeCalled")
         parsedLine = line.split()
-        # 1 line is arithmetic
         if len(parsedLine) == 1:
             return self.C_ARITHMETIC
         elif line.startswith("push"):
-            # print("commandType: push")
             return self.C_PUSH
         elif line.startswith("pop"):
-            # print("commandType: pop")
             return self.C_POP
         elif line.startswith("label"):
-            # print("commandType: label")
             return self.C_LABEL
         elif line.startswith("goto"):
-            print("commandType: goto")
             return self.C_GOTO
         elif line.startswith("if-goto"):
-            # print("commandType: if-goto")
             return self.C_IF
         else:
             print("commandType did not detect")

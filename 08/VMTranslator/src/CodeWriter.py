@@ -225,3 +225,12 @@ class CodeWriter:
         outputArray.append("D=M") # get value at stack (this should be either a 0 for
         outputArray.append("@" + labelName) # queues up correct address
         outputArray.append("D;JNE") # checks if D != 0, this means it's -1 (true)
+
+    # writes the function
+    def writeFunction(self, functionName, numArgs, outputArray):
+        outputArray.append("(" + functionName + ")")
+        for num in range(numArgs):
+            self.writePushPop(self.C_PUSH, "constant", "0", outputArray) # uses previously written write constant
+
+
+    # writes the call
