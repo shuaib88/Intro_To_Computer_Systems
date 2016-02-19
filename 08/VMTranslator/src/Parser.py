@@ -1,10 +1,6 @@
-import sys
 import os
-from RemoveWhitespace import RemoveWhitespace
-from CodeWriter import CodeWriter
 
-import re
-
+# Parses input array
 class Parser:
 
     # file read write related

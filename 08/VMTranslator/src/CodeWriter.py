@@ -35,12 +35,8 @@ class CodeWriter:
         "pointer" : 3
     }
 
-    # in case i want to rewrite this to have CodeWriter write directly to file
-    # def __init__(self, outputFilePath):
-    #
-    #     # transforms file into a list of lines
-    #     outputFile = open(outputFilePath, 'w')
 
+    #captures file base name
     def takesFunctionName(self, fileBasename):
         self.fileBasename = fileBasename
 

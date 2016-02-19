@@ -2,11 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b5227ddf-f4b0-44b4-afee-3ccd2346b466" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/FunctionCalls/FibonacciElement/FibonacciElement.asm" afterPath="$PROJECT_DIR$/FunctionCalls/FibonacciElement/FibonacciElement.asm" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/FunctionCalls/FibonacciElement/FibonacciElement.out" afterPath="$PROJECT_DIR$/FunctionCalls/FibonacciElement/FibonacciElement.out" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/FunctionCalls/SimpleFunction/SimpleFunction.asm" afterPath="$PROJECT_DIR$/FunctionCalls/SimpleFunction/SimpleFunction.asm" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/VMTranslator/src/CodeWriter.py" afterPath="$PROJECT_DIR$/VMTranslator/src/CodeWriter.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/VMTranslator/src/Parser.py" afterPath="$PROJECT_DIR$/VMTranslator/src/Parser.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/VMTranslator/src/VMTranslator.py" afterPath="$PROJECT_DIR$/VMTranslator/src/VMTranslator.py" />
     </list>
     <ignored path="08.iws" />
@@ -35,8 +32,8 @@
       <file leaf-file-name="CodeWriter.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/VMTranslator/src/CodeWriter.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="6.609756">
-              <caret line="299" column="8" selection-start-line="299" selection-start-column="10" selection-end-line="300" selection-end-column="35" />
+            <state vertical-scroll-proportion="8.467849">
+              <caret line="201" column="58" selection-start-line="201" selection-start-column="46" selection-end-line="201" selection-end-column="58" />
               <folding />
             </state>
           </provider>
@@ -45,11 +42,9 @@
       <file leaf-file-name="Parser.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/VMTranslator/src/Parser.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-7.65625">
-              <caret line="84" column="8" selection-start-line="84" selection-start-column="10" selection-end-line="85" selection-end-column="33" />
-              <folding>
-                <element signature="e#0#10#0" expanded="true" />
-              </folding>
+            <state vertical-scroll-proportion="-4.6875">
+              <caret line="40" column="30" selection-start-line="40" selection-start-column="24" selection-end-line="40" selection-end-column="30" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -57,11 +52,9 @@
       <file leaf-file-name="VMTranslator.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/VMTranslator/src/VMTranslator.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-5.34375">
-              <caret line="63" column="46" selection-start-line="63" selection-start-column="46" selection-end-line="63" selection-end-column="46" />
-              <folding>
-                <element signature="e#0#10#0" expanded="true" />
-              </folding>
+            <state vertical-scroll-proportion="-2.375">
+              <caret line="4" column="38" selection-start-line="4" selection-start-column="38" selection-end-line="4" selection-end-column="38" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -111,10 +104,10 @@
         <option value="$PROJECT_DIR$/TestDirectory/test2.vm" />
         <option value="$PROJECT_DIR$/TestDirectory/test1.vm" />
         <option value="$PROJECT_DIR$/TestDirectory/TestDirectory.asm" />
-        <option value="$PROJECT_DIR$/VMTranslator/src/Parser.py" />
         <option value="$PROJECT_DIR$/FunctionCalls/FibonacciElement/FibonacciElement.asm" />
-        <option value="$PROJECT_DIR$/VMTranslator/src/CodeWriter.py" />
         <option value="$PROJECT_DIR$/VMTranslator/src/VMTranslator.py" />
+        <option value="$PROJECT_DIR$/VMTranslator/src/Parser.py" />
+        <option value="$PROJECT_DIR$/VMTranslator/src/CodeWriter.py" />
       </list>
     </option>
   </component>
@@ -614,9 +607,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="e#0#10#0" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -632,9 +623,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="e#0#10#0" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -642,9 +631,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="e#0#10#0" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -760,16 +747,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/VMTranslator/src/Parser.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-7.65625">
-          <caret line="84" column="8" selection-start-line="84" selection-start-column="10" selection-end-line="85" selection-end-column="33" />
-          <folding>
-            <element signature="e#0#10#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/TestDirectory/TestDirectory.asm">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.76397514">
@@ -826,16 +803,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/VMTranslator/src/VMTranslator.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-5.34375">
-          <caret line="63" column="46" selection-start-line="63" selection-start-column="46" selection-end-line="63" selection-end-column="46" />
-          <folding>
-            <element signature="e#0#10#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/FunctionCalls/StaticsTest/StaticsTest.asm">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -844,10 +811,26 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/VMTranslator/src/VMTranslator.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-2.375">
+          <caret line="4" column="38" selection-start-line="4" selection-start-column="38" selection-end-line="4" selection-end-column="38" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/VMTranslator/src/Parser.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-4.6875">
+          <caret line="40" column="30" selection-start-line="40" selection-start-column="24" selection-end-line="40" selection-end-column="30" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/VMTranslator/src/CodeWriter.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="6.609756">
-          <caret line="299" column="8" selection-start-line="299" selection-start-column="10" selection-end-line="300" selection-end-column="35" />
+        <state vertical-scroll-proportion="8.467849">
+          <caret line="201" column="58" selection-start-line="201" selection-start-column="46" selection-end-line="201" selection-end-column="58" />
           <folding />
         </state>
       </provider>

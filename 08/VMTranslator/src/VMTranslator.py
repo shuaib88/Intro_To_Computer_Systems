@@ -4,58 +4,17 @@ import os
 
 from os.path import normpath, basename
 
-import glob
-
 from Parser import Parser
 
 from RemoveWhitespace import RemoveWhitespace
 
 from CodeWriter import CodeWriter
 
-## main function to be moved to VMTranslator
-
-# #extract filename and root from filename
-# # script, inputFilename = sys.argv
-# inputFilename = "/Users/shuaibahmed/Code/Intro_Computer_Sys/nand2tetris/projects/08/FunctionCalls/FibonacciElement"
-# rootName = os.path.splitext(inputFilename)[0]
-# # get basename for CodeWriter's use
-#
-# #declare output file path
-# outFile = rootName + ".asm"
-#
-# # declare codewriter to pass to parser
-# newCodeWriter = CodeWriter()
-#
-# ##Main function
-# # create new parser object
-# newParser = Parser(inputFilename, newCodeWriter)
-#
-# # remove comments and extra lines
-# noCommentsArray = RemoveWhitespace.removeWhiteSpaceAndComments(newParser.linesArray)
-#
-# # translate vm file into .asm file
-# # output array here
-# outputArray = newParser.translateVMtoASM(noCommentsArray)
-#
-# #add array to new hack file in same path as input
-# with open(outFile, 'w') as outputFile:
-#     for line in outputArray:
-#       outputFile.write(line + "\n")
-
-
-
-##
-##
-## Code for if the input is a directory file
-
-# if input path is file
-    # run existing code above
-
-# else:
-    # run code below
-
+## Main function of the VMTranslator
+# handles single file or directory
 script, attemptedPathInput = sys.argv
 
+# file or directory handling:
 if os.path.isdir(attemptedPathInput):
     directoryPath = attemptedPathInput
 
@@ -64,17 +23,11 @@ else:
     print("attempt single file's directoryPath")
     print(directoryPath)
 
-# directoryPath = "/Users/shuaibahmed/Code/Intro_Computer_Sys/nand2tetris/projects/08/FunctionCalls/StaticsTest"
-
-directoryBase = basename(normpath(directoryPath))
-
-print("directoryBase:")
-print(directoryBase)
-
 # create code writer
 newCodeWriter = CodeWriter()
 
-#declare output file path
+#determine output file path
+directoryBase = basename(normpath(directoryPath))
 outFile = directoryPath + "/" + directoryBase + ".asm"
 
 # declare array to store all our values
