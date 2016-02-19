@@ -84,7 +84,7 @@ class CodeWriter:
             outputArray.append("A=M-1") # A points to where x was; put 0 there
             outputArray.append("M=0")
             outputArray.append("(CONTINUE" + str(self.labelCounter) + ")")
-            self.labelCounter += 1 #increment the number
+            self.labelCounter += 1 # increment the label Counter
         elif line.startswith("gt"): # if x > y true, else false
             outputArray.append("@SP")
             outputArray.append("AM=M-1") #decrement SP and dereference
@@ -245,7 +245,7 @@ class CodeWriter:
     # # writes the call
     def writeCall(self, functionName, numArgs, outputArray):
         outputArray.append("// writeCall")
-        uniqueFunctionName = functionName + str(self.labelCounter)
+        uniqueFunctionName = functionName + str(self.labelCounter) # create uniqueFunctionName
         outputArray.append("@" + uniqueFunctionName) #push return address
         outputArray.append("D=A")
         outputArray.append("@SP")
@@ -296,6 +296,9 @@ class CodeWriter:
         outputArray.append("@" + functionName) # goto F
         outputArray.append("0;JMP")
         outputArray.append("(" + uniqueFunctionName + ")") # declare a label for return address
+        self.labelCounter += 1 # increment labelCounter
+        # print("uniqueFunctionName after CALL statement")
+        # print(uniqueFunctionName)
 
     def writeInit(self, outputArray):
         if self.hasInitRun == False:
@@ -304,7 +307,7 @@ class CodeWriter:
             outputArray.append("D=A")
             outputArray.append("@SP")
             outputArray.append("M=D")
-            self.writeCall("sys.init", 0, outputArray)
+            self.writeCall("Sys.init", 0, outputArray)
             self.hasInitRun = True
 
     # writes the return function

@@ -1,4 +1,63 @@
+//SimpleFunction.vm
+// INIT
+@256
+D=A
+@SP
+M=D
+// writeCall
+@sys.init0
+D=A
+@SP
+A=M
+M=D
+@SP
+M=M+1
+@LCL
+D=M
+@SP
+A=M
+M=D
+@SP
+M=M+1
+@ARG
+D=M
+@SP
+A=M
+M=D
+@SP
+M=M+1
+@THIS
+D=M
+@SP
+A=M
+M=D
+@SP
+M=M+1
+@THAT
+D=M
+@SP
+A=M
+M=D
+@SP
+M=M+1
+@SP
+D=M
+@0
+D=D-A
+@5
+D=D-A
+@ARG
+M=D
+@SP
+D=M
+@LCL
+M=D
+@sys.init
+0;JMP
+(sys.init0)
+// writeFunction
 (SimpleFunction.test)
+//PUSH_POP
 @0
 D=A
 @SP
@@ -6,6 +65,7 @@ A=M
 M=D
 @SP
 M=M+1
+//PUSH_POP
 @0
 D=A
 @SP
@@ -13,6 +73,7 @@ A=M
 M=D
 @SP
 M=M+1
+//PUSH_POP
 @LCL
 D=M
 @0
@@ -23,6 +84,7 @@ A=M
 M=D
 @SP
 M=M+1
+//PUSH_POP
 @LCL
 D=M
 @1
@@ -33,14 +95,18 @@ A=M
 M=D
 @SP
 M=M+1
+// ARITHMETIC
+// add
 @SP
 AM=M-1
 D=M
 A=A-1
 M=M+D
+// ARITHMETIC
 @SP
 A=M-1
 M=!M
+//PUSH_POP
 @ARG
 D=M
 @0
@@ -51,11 +117,14 @@ A=M
 M=D
 @SP
 M=M+1
+// ARITHMETIC
+// add
 @SP
 AM=M-1
 D=M
 A=A-1
 M=M+D
+//PUSH_POP
 @ARG
 D=M
 @1
@@ -66,12 +135,13 @@ A=M
 M=D
 @SP
 M=M+1
+// ARITHMETIC
 @SP
 AM=M-1
 D=M
 A=A-1
 M=M-D
-// RETURN BEGINS
+// RETURN
 @LCL
 D=M
 @FRAME

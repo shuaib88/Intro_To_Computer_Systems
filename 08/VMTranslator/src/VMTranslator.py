@@ -54,22 +54,31 @@ from CodeWriter import CodeWriter
 # else:
     # run code below
 
-directoryPath = "/Users/shuaibahmed/Code/Intro_Computer_Sys/nand2tetris/projects/08/TestDirectory"
+script, attemptedPathInput = sys.argv
+
+if os.path.isdir(attemptedPathInput):
+    directoryPath = attemptedPathInput
+
+else:
+    directoryPath = os.path.dirname(os.path.abspath(attemptedPathInput))
+    print("attempt single file's directoryPath")
+    print(directoryPath)
+
+# directoryPath = "/Users/shuaibahmed/Code/Intro_Computer_Sys/nand2tetris/projects/08/FunctionCalls/StaticsTest"
 
 directoryBase = basename(normpath(directoryPath))
+
+print("directoryBase:")
+print(directoryBase)
 
 # create code writer
 newCodeWriter = CodeWriter()
 
 #declare output file path
-# outFile = directoryPath + "/outFile.asm"
 outFile = directoryPath + "/" + directoryBase + ".asm"
 
 # declare array to store all our values
 masterOutputArray = []
-
-# test
-fred = [1]
 
 for inputFile in os.listdir(directoryPath):
 
@@ -81,52 +90,22 @@ for inputFile in os.listdir(directoryPath):
         # create new parser object
         newParser = Parser(fullPathInputFile, newCodeWriter)
 
-        # print("newParser")
-        # print(newParser)
-
-        # print("fullPathInputFile:")
-        # print(fullPathInputFile)
-
         # remove comments and extra lines
         noCommentsArray = RemoveWhitespace.removeWhiteSpaceAndComments(newParser.linesArray)
 
+        # for debugging code: adds file name
         outputArray = []
-
-        # debugging code adds file name
         outputArray.append("//" + inputFile)
 
-        # print("hasInitRun before Parse")
-        # print(newCodeWriter.hasInitRun)
-
+        #output array from my Parser
         newParserOutput = newParser.translateVMtoASM(noCommentsArray)
 
-        # print("hasInitRun after parse")
-        # print(newCodeWriter.hasInitRun)
-
-        # print("noCommentsArray")
-        # print(noCommentsArray)
-
-        # print("newParserOutput: ")
-        # print(newParserOutput)
-        # print(len(newParserOutput))
-
         # translate vm file into .asm file
-        # output array here
+        # tack on Parser output to debug code
         outputArray.extend(newParserOutput)
-
-        # print("outputArray from newParser")
-        # print(outputArray)
-        #
-        # print("length of outputarray")
-        # print(len(outputArray))
 
         #extend our master output array
         masterOutputArray.extend(outputArray)
-
-        # print("len of masterArray after parser runs")
-        # print(len(masterOutputArray))
-        # print("masterOutputArray")
-        # print(masterOutputArray)
 
 #add array to new hack file in same path as input
 with open(outFile, 'w') as outputFile:
