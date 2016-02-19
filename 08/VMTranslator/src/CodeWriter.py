@@ -227,10 +227,67 @@ class CodeWriter:
         outputArray.append("D;JNE") # checks if D != 0, this means it's -1 (true)
 
     # writes the function
-    def writeFunction(self, functionName, numArgs, outputArray):
+    def writeFunction(self, functionName, numLocalVars, outputArray):
         outputArray.append("(" + functionName + ")")
-        for num in range(numArgs):
+        for num in range(numLocalVars):
             self.writePushPop(self.C_PUSH, "constant", "0", outputArray) # uses previously written write constant
 
+    # # writes the call
+    def writeCall(self, functionName, numArgs, outputArray):
+        pass
 
-    # writes the call
+    # writes the return function
+    # this is going to get the return address, reset the frame back to the caller
+    # and jump back to the caller
+    def writeReturn(self, outputArray):
+        outputArray.append("// RETURN BEGINS")
+        outputArray.append("@LCL") #FRAME = LCL
+        outputArray.append("D=M")
+        outputArray.append("@FRAME")
+        outputArray.append("M=D")
+        outputArray.append("@FRAME") # RET = *(FRAME-5)
+        outputArray.append("D=M")
+        outputArray.append("@5")
+        outputArray.append("A=D-A")
+        outputArray.append("D=M")
+        outputArray.append("@RET")
+        outputArray.append("M=D")
+        outputArray.append("@SP") # *ARG = pop()
+        outputArray.append("AM=M-1")
+        outputArray.append("D=M")
+        outputArray.append("@ARG")
+        outputArray.append("A=M")
+        outputArray.append("M=D")
+        outputArray.append("@ARG") # SP = ARG + 1
+        outputArray.append("D=M+1")
+        outputArray.append("@SP")
+        outputArray.append("M=D")
+        outputArray.append("@FRAME") # THAT = *(FRAME-1)
+        outputArray.append("A=M-1")
+        outputArray.append("D=M")
+        outputArray.append("@THAT")
+        outputArray.append("M=D")
+        outputArray.append("@FRAME") # THIS = *(FRAME-2)
+        outputArray.append("D=M")
+        outputArray.append("@2")
+        outputArray.append("A=D-A")
+        outputArray.append("D=M")
+        outputArray.append("@THIS")
+        outputArray.append("M=D")
+        outputArray.append("@FRAME") # ARG = *(FRAME - 3)
+        outputArray.append("D=M")
+        outputArray.append("@3")
+        outputArray.append("A=D-A")
+        outputArray.append("D=M")
+        outputArray.append("@ARG")
+        outputArray.append("M=D")
+        outputArray.append("@FRAME") # LCL = * (FRAME - 4)
+        outputArray.append("D=M")
+        outputArray.append("@4")
+        outputArray.append("A=D-A")
+        outputArray.append("D=M")
+        outputArray.append("@LCL")
+        outputArray.append("M=D")
+        outputArray.append("@RET") # goto RET
+        outputArray.append("A=M")
+        outputArray.append("0;JMP")

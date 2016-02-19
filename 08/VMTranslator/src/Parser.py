@@ -14,6 +14,9 @@ class Parser:
     # code writer
     codeWriter = None
 
+    # arithmetic dictionary
+    arithmeticDictionary = ["add", "sub", "neg", "eq", "gt", "lt", "and", "or", "not"]
+
     # command types
     C_ARITHMETIC = 0
     C_PUSH = 1
@@ -21,9 +24,9 @@ class Parser:
     C_LABEL = 3
     C_GOTO = 4
     C_IF = 5 # using for if-goto commands
-    # C_FUNCTION = 6
-    # C_RETURN = 7
-    # C_CALL = 8
+    C_FUNCTION = 6
+    C_RETURN = 7
+    C_CALL = 8
 
     # Initializer prepares a fresh array
     def __init__(self, inputFile, codeWriter):
@@ -52,7 +55,7 @@ class Parser:
     # this week it's arithmetic push or pop
     def commandType(self, line):
         parsedLine = line.split()
-        if len(parsedLine) == 1:
+        if parsedLine[0] in self.arithmeticDictionary:
             return self.C_ARITHMETIC
         elif line.startswith("push"):
             return self.C_PUSH
@@ -64,6 +67,12 @@ class Parser:
             return self.C_GOTO
         elif line.startswith("if-goto"):
             return self.C_IF
+        elif line.startswith("function"):
+            return self.C_FUNCTION
+        elif line.startswith("return"):
+            return self.C_RETURN
+        elif line.startswith("call"):
+            return self.C_CALL
         else:
             print("commandType did not detect")
 
@@ -91,6 +100,15 @@ class Parser:
                 parsedLine = line.split()
                 labelName = parsedLine[1] # this is the label part
                 self.codeWriter.writeIfGoto(labelName, self.outputArray) # write the label to output array label
+            elif self.commandType(line) == self.C_FUNCTION:
+                parsedLine = line.split()
+                functionName = parsedLine[1]
+                numLocalVars = int(parsedLine[2])
+                self.codeWriter.writeFunction(functionName, numLocalVars, self.outputArray)
+            elif self.commandType(line) == self.C_RETURN:
+                self.codeWriter.writeReturn(self.outputArray)
+            elif self.commandType(line) == self.C_CALL:
+                print("found Call")
             else:
                 self.outputArray.append("ERROR")
         return self.outputArray
