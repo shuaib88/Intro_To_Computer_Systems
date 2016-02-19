@@ -5,10 +5,9 @@ My program can be run from any machine that has python 3 and likely python
 
 From the command line navigate to the src directory
 
-To run the program use the following replacing testFile.vm with your file
->> python3 Assembler.py /path/testfile.vm
-
-You must write the full path of the testfile in addition to the file name
+To run the program use the following replacing /path with the
+full path to your file or directory
+>> python3 Assembler.py /path
 
 There is no error handling so you must not pass more arguments than above
 
@@ -23,9 +22,6 @@ access them.RemoveWhiteSpace has code to remove comments and extra whitespace.
 I used one outside resource to get the codes for the symbol table instead of hand
 coding them. The reference is listed in the appropriate place.
 
-LIMITATIONS:
-I did not write the main to take a directory and write .asm files for each
-This is a trivial task and I just didn’t have time to do it
-
 ATTRIBUTIONS:
 I used the class notes worksheet as a base for most all of my codeWriter code. I used the examples and then built variations off it
+Thanks to Marty and Thomas for helping me debug and learn the code
