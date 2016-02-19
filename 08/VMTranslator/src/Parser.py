@@ -44,6 +44,9 @@ class Parser:
         #attempting to pass baseName to the coder object
         self.codeWriter.takesFunctionName(baseName)
 
+        # clears output array (it remained on the heap with successive runs)
+        self.outputArray = []
+
     # checks if there are more commands to process
     def hasMoreCommands(self):
         if self.currentLineNumber - 1 < len(self.linesArray):
@@ -79,6 +82,10 @@ class Parser:
     # translates the given line using the definitions and structures
     # stored in CodeWriter
     def translateVMtoASM(self, commentStrippedArray):
+        # print("outputArray before translate executes")
+        # print(self.outputArray)
+        if self.codeWriter.hasInitRun == False:
+            self.codeWriter.writeInit(self.outputArray)
         for line in commentStrippedArray:
             if self.commandType(line) == self.C_ARITHMETIC:
                 self.codeWriter.writeArithmetic(line, self.outputArray)
@@ -108,7 +115,10 @@ class Parser:
             elif self.commandType(line) == self.C_RETURN:
                 self.codeWriter.writeReturn(self.outputArray)
             elif self.commandType(line) == self.C_CALL:
-                print("found Call")
+                parsedLine = line.split()
+                functionName = parsedLine[1]
+                numArgs = parsedLine[2] # doesnt need to be int
+                self.codeWriter.writeCall(functionName, numArgs, self.outputArray)
             else:
                 self.outputArray.append("ERROR")
         return self.outputArray

@@ -7,6 +7,9 @@ class CodeWriter:
     # dictionary stores the # of times any label having arguments are used
     labelCounter = 0
 
+    # stores if init has run
+    hasInitRun = False
+
     # command types
     C_ARITHMETIC = 0
     C_PUSH = 1
@@ -43,7 +46,9 @@ class CodeWriter:
 
     # writes assembly code for all the arithmetic operations
     def writeArithmetic(self, line, outputArray):
+        outputArray.append("// ARITHMETIC")
         if line.startswith("add"):
+            outputArray.append("// add")
             outputArray.append("@SP")
             outputArray.append("AM=M-1")
             outputArray.append("D=M")
@@ -56,6 +61,7 @@ class CodeWriter:
             outputArray.append("A=A-1")
             outputArray.append("M=M-D")
         elif line.startswith("neg"): # whatever is in y, make it -y
+            outputArray.append("// neg")
             outputArray.append("D=0")
             outputArray.append("@SP") # call stack pointer
             outputArray.append("A=M-1") # derefrence SP; point to y
@@ -138,6 +144,7 @@ class CodeWriter:
 
     # write push/
     def writePushPop(self, command, segment, index, outputArray):
+        outputArray.append("//PUSH_POP")
         if segment == "constant":
             outputArray.append("@" + index) # initialize value
             outputArray.append("D=A") # store value in register
@@ -210,16 +217,18 @@ class CodeWriter:
 
     # writes the label takes in the outputArray
     def writeLabel(self, labelName, outputArray):
-        # outputArray.append("@" + labelName) #write the label name
+        outputArray.append("// LABEL")
         outputArray.append("(" + labelName + ")") #write the label name
 
     # writes the asm code block for goto label to outputArray
     def writeGotoLabel(self, labelName, outputArray):
+        outputArray.append("//GoTo")
         outputArray.append("@" + labelName)
         outputArray.append("D;JMP")
 
     # writes the asm block for if goto
     def writeIfGoto(self, labelName, outputArray):
+        outputArray.append("//IfGoto")
         outputArray.append("@SP")
         outputArray.append("AM=M-1") # dereference and decrement stack
         outputArray.append("D=M") # get value at stack (this should be either a 0 for
@@ -228,19 +237,81 @@ class CodeWriter:
 
     # writes the function
     def writeFunction(self, functionName, numLocalVars, outputArray):
+        outputArray.append("// writeFunction")
         outputArray.append("(" + functionName + ")")
         for num in range(numLocalVars):
             self.writePushPop(self.C_PUSH, "constant", "0", outputArray) # uses previously written write constant
 
     # # writes the call
     def writeCall(self, functionName, numArgs, outputArray):
-        pass
+        outputArray.append("// writeCall")
+        uniqueFunctionName = functionName + str(self.labelCounter)
+        outputArray.append("@" + uniqueFunctionName) #push return address
+        outputArray.append("D=A")
+        outputArray.append("@SP")
+        outputArray.append("A=M")
+        outputArray.append("M=D")
+        outputArray.append("@SP")
+        outputArray.append("M=M+1")
+        outputArray.append("@LCL") # push LCL
+        outputArray.append("D=M")
+        outputArray.append("@SP")
+        outputArray.append("A=M")
+        outputArray.append("M=D")
+        outputArray.append("@SP")
+        outputArray.append("M=M+1")
+        outputArray.append("@ARG") # push ARG
+        outputArray.append("D=M")
+        outputArray.append("@SP")
+        outputArray.append("A=M")
+        outputArray.append("M=D")
+        outputArray.append("@SP")
+        outputArray.append("M=M+1")
+        outputArray.append("@THIS") # push THIS
+        outputArray.append("D=M")
+        outputArray.append("@SP")
+        outputArray.append("A=M")
+        outputArray.append("M=D")
+        outputArray.append("@SP")
+        outputArray.append("M=M+1")
+        outputArray.append("@THAT") # push THAT
+        outputArray.append("D=M")
+        outputArray.append("@SP")
+        outputArray.append("A=M")
+        outputArray.append("M=D")
+        outputArray.append("@SP")
+        outputArray.append("M=M+1")
+        outputArray.append("@SP") #ARG = SP-n-5
+        outputArray.append("D=M")
+        outputArray.append("@" + str(numArgs))
+        outputArray.append("D=D-A")
+        outputArray.append("@5")
+        outputArray.append("D=D-A")
+        outputArray.append("@ARG")
+        outputArray.append("M=D")
+        outputArray.append("@SP") # LCL = SP
+        outputArray.append("D=M")
+        outputArray.append("@LCL")
+        outputArray.append("M=D")
+        outputArray.append("@" + functionName) # goto F
+        outputArray.append("0;JMP")
+        outputArray.append("(" + uniqueFunctionName + ")") # declare a label for return address
+
+    def writeInit(self, outputArray):
+        if self.hasInitRun == False:
+            outputArray.append("// INIT")
+            outputArray.append("@256")
+            outputArray.append("D=A")
+            outputArray.append("@SP")
+            outputArray.append("M=D")
+            self.writeCall("sys.init", 0, outputArray)
+            self.hasInitRun = True
 
     # writes the return function
     # this is going to get the return address, reset the frame back to the caller
     # and jump back to the caller
     def writeReturn(self, outputArray):
-        outputArray.append("// RETURN BEGINS")
+        outputArray.append("// RETURN")
         outputArray.append("@LCL") #FRAME = LCL
         outputArray.append("D=M")
         outputArray.append("@FRAME")
