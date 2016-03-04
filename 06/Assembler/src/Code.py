@@ -70,3 +70,5 @@ class Code:
     #parameter: inputString - the destination mnemonic for jumps. output: code for the jump
     def jump(self, inputString):
         return self.jumpDictionary[inputString]
+
+

@@ -1,0 +1,77 @@
+// class for pellets that square will eat
+
+
+class Pellet {
+
+    // location on the screen
+    field int x, y;
+
+    // size of the pellet
+    field int size;
+
+    // state of the pellet -- 0 is dead 1 is alive
+    field int state;
+
+
+    /** constructs a new pellet with a given location **/
+    constructor Pellet new(int Ax, int Ay) {
+        let x = Ax;
+        let y = Ay;
+        let size = 2;
+        let state = 1;
+
+        do draw();
+
+        return this;
+    }
+
+    /** Deallocates the object's memory. */
+    method void dispose() {
+        do Memory.deAlloc(this);
+        return;
+    }
+
+    // draws the Pellet
+    method void draw() {
+        do Screen.setColor(true);
+        do Screen.drawRectangle(x, y, x + size, y + size);
+        return;
+    }
+
+    /** gets x **/
+    method int getX() {
+        return x;
+    }
+
+    /** gets y **/
+    method int getY() {
+        return y;
+    }
+
+    /** Erases the square from the screen. */
+    method void erase() {
+        do Screen.setColor(false);
+        do Screen.drawRectangle(x, y, x + size, y + size);
+        return;
+    }
+
+    /** changes the state of the pellete **/
+    method void makeDead() {
+        let state = 0;
+        return;
+    }
+
+    /** getter **/
+    method int getState() {
+        return state;
+    }
+
+
+
+
+
+
+
+
+
+}

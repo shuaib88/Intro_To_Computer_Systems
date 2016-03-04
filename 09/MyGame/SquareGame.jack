@@ -14,16 +14,44 @@
  */
 class SquareGame {
 
+    // Random class
+    field Random random;
+
+    // Pellet array
+    field Array pelletArray;
+
     // The square
     field Square square;
+
+    // The pellet
+    field Pellet pellet;
 
     // The square's movement direction
     field int direction; // 0=none,1=up,2=down,3=left,4=right
 
     /** Constructs a new Square Game. */
     constructor SquareGame new() {
+
+        var int counter;
+        var Pellet currentPellet;
+
+        let pelletArray = Array.new(10);
+
+        let random = Random.new(0);
         let square = Square.new(0, 0, 30);
         let direction = 0;
+
+        //add a pellets to the screen
+        let counter = 0;
+
+        let pellet = Pellet.new(random.randRange(400), random.randRange(100));
+
+        while (counter < 10) {
+           let pelletArray[counter] = Pellet.new(random.randRange(400), random.randRange(100));
+           let counter = counter + 1;
+        }
+
+
 
         return this;
     }
@@ -31,6 +59,7 @@ class SquareGame {
     /** Deallocates the object's memory. */
     method void dispose() {
         do square.dispose();
+        do pellet.dispose();
         do Memory.deAlloc(this);
         return;
     }
@@ -38,16 +67,27 @@ class SquareGame {
     /** Starts the game. Handles inputs from the user that control
      *  the square's movement, direction and size. */
     method void run() {
+        var int counter;
         var char key;
         var boolean exit;
 
         let exit = false;
+        let counter = 0;
 
         while (~exit) {
             // waits for a key to be pressed.
             while (key = 0) {
                 let key = Keyboard.keyPressed();
                 do moveSquare();
+
+                do didEat();
+
+                //while (counter < 10) {
+                  //  do Output.printInt(pelletArray[counter].getX());
+                    //do didEat(pelletArray[counter]);
+                    //let counter = counter + 1;
+                //}
+
             }
 
             if (key = 81) {
@@ -72,10 +112,14 @@ class SquareGame {
                 let direction = 4;
             }
 
+
+
             // waits for the key to be released.
             while (~(key = 0)) {
                 let key = Keyboard.keyPressed();
                 do moveSquare();
+
+
             }
         }
             
@@ -100,4 +144,24 @@ class SquareGame {
         do Sys.wait(5); // Delays the next movement.
         return;
     }
+
+    method void didEat() {
+             if ((pellet.getState() = 1) & (( (pellet.getX() > square.getX()) & (pellet.getX() < (square.getX() + square.getSize()) ) ) & ((pellet.getY() > square.getY()) & (pellet.getY() < (square.getY() + square.getSize()))))) {
+                    do Output.printString("square can eat pellet");
+                    do pellet.makeDead();
+                    do square.incSize();
+                    do Output.printInt(pellet.getState());
+                    do Output.printInt(random.randRange(10));
+                }
+
+            //if ((pellet.getState() = 1) & (( (pellet.getX() > square.getX()) & (pellet.getX() < (square.getX() + square.getSize()) ) ) & ((pellet.getY() > square.getY()) & (pellet.getY() < (square.getY() + square.getSize()))))) {
+              //      do Output.printString("square can eat pellet");
+                //    do pellet.makeDead();
+                  //  do square.incSize();
+                    //do Output.printInt(pellet.getState());
+                    //do Output.printInt(random.randRange(10));
+                //}
+
+        return;
+        }
 }
