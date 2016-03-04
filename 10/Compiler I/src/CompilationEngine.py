@@ -35,6 +35,8 @@ class CompilationEngine:
         self.tokenizer.advance()
         while self.extractedToken() in ('constructor', 'function', 'method'):
             self.compileSubroutine()
+
+        self.write(self.tokenizer.currentToken) # writes ";"
         self.outputFile.write('</class>')
 
     def compileSubroutine(self):
@@ -53,7 +55,6 @@ class CompilationEngine:
         # need to close out ) and whatever else comes in end
         self.decrIndent()
         self.write('</subroutineDec>')
-        print("compileSubroutine end")
 
     def compileParameterList(self):
         self.write('<parameterList>')
@@ -73,16 +74,14 @@ class CompilationEngine:
         self.advanceAndWrite() # should be {
         self.tokenizer.advance()
 
-        # print(self.extractedToken())
         while self.extractedToken() != "}":
-
 
             while self.extractedToken() == "var":
                 self.compileVarDec()  # varDec* statements
 
-            while self.extractedToken() in ('let', 'do'): #('let', 'while', 'if', 'do'):
-                self.compileStatements() # compile statements
+            self.compileStatements() # compile statements
 
+            self.write(self.tokenizer.currentToken) # writes ";"
             self.tokenizer.advance()
 
         #ultimately }
@@ -94,14 +93,36 @@ class CompilationEngine:
         self.write('<statements>')
         self.incrIndent()
 
-        if self.extractedToken() == 'let':
-            self.compileLet()
+        while self.extractedToken() != 'return':
 
-        if self.extractedToken() == 'do':
-            self.compileDo()
+            if self.extractedToken() == 'let':
+                self.compileLet()
+
+            if self.extractedToken() == 'do':
+                self.compileDo()
+
+
+        if self.extractedToken() == 'return':
+            self.compileReturn()
 
         self.decrIndent()
         self.write('</statements>')
+
+    def compileReturn(self):
+        self.write('<returnStatement>')
+        self.incrIndent()
+
+        self.write(self.tokenizer.currentToken) # writes "return"
+        self.tokenizer.advance()
+
+        if self.extractedToken() != ";":
+            self.compileExpression()    #if return should return an expression
+
+        self.write(self.tokenizer.currentToken) # writes ";"
+        self.tokenizer.advance()
+
+        self.decrIndent()
+        self.write('</returnStatement>')
 
     def compileDo(self):
         self.write('<doStatement>')
@@ -111,7 +132,16 @@ class CompilationEngine:
         self.tokenizer.advance()
 
         while self.extractedToken() != ";":
-            self.write(self.tokenizer.currentToken) # writes "do"
+
+
+            if self.extractedToken() == "(":
+                self.write(self.tokenizer.currentToken) # writes the "("
+                self.tokenizer.advance()
+
+                #call expression list
+                self.compileExpressionList()
+
+            self.write(self.tokenizer.currentToken) # writes the subroutine tokens
             self.tokenizer.advance()
 
         self.write(self.tokenizer.currentToken) # writes ";"
@@ -120,7 +150,15 @@ class CompilationEngine:
         self.decrIndent()
         self.write('</doStatement>')
 
-        print("do called")
+    def compileExpressionList(self):
+        self.write('<expressionList>')
+        self.incrIndent()
+
+        # will fill this out when have more expressions
+
+        self.decrIndent()
+        self.write('</expressionList>')
+        pass
 
     def compileLet(self):
         self.write('<letStatement>')
@@ -193,6 +231,7 @@ class CompilationEngine:
             self.tokenizer.advance()
 
         self.write(self.tokenizer.currentToken) #should be a ";"
+        self.tokenizer.advance()
 
         self.decrIndent()
         self.write('</varDec>')

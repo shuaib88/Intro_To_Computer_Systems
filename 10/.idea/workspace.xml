@@ -2,23 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d96a3dd6-65e1-4548-98d5-08eb577f8f87" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../09/.idea/vcs.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../09/MyGame/Main.jack" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../09/MyGame/Pellet.jack" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../09/MyGame/Random.jack" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Compiler I/README.txt" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Compiler I/src/CompilationEngine.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Compiler I/src/JackAnalyzer.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Compiler I/src/JackTokenizer.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Compiler I/src/regexes.py" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../09/Snake/Main.jack" afterPath="" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/../09/Snake/Square.jack" afterPath="$PROJECT_DIR$/../09/MyGame/Square.jack" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/../09/Snake/SquareGame.jack" afterPath="$PROJECT_DIR$/../09/MyGame/SquareGame.jack" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../06/.idea/workspace.xml" afterPath="$PROJECT_DIR$/../06/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../06/Assembler/src/Code.py" afterPath="$PROJECT_DIR$/../06/Assembler/src/Code.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../07/.idea/workspace.xml" afterPath="$PROJECT_DIR$/../07/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../08/.idea/workspace.xml" afterPath="$PROJECT_DIR$/../08/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Compiler I/src/CompilationEngine.py" afterPath="$PROJECT_DIR$/Compiler I/src/CompilationEngine.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ExpressionlessSquare/MainShuaib.xml" afterPath="$PROJECT_DIR$/ExpressionlessSquare/MainShuaib.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ExpressionlessSquare/SquareGameShuaib.xml" afterPath="$PROJECT_DIR$/ExpressionlessSquare/SquareGameShuaib.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ExpressionlessSquare/SquareShuaib.xml" afterPath="$PROJECT_DIR$/ExpressionlessSquare/SquareShuaib.xml" />
     </list>
     <ignored path="10.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -40,11 +28,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
-      <file leaf-file-name="CompilationEngine.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="CompilationEngine.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Compiler I/src/CompilationEngine.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.52430046">
-              <caret line="113" column="12" selection-start-line="113" selection-start-column="12" selection-end-line="113" selection-end-column="12" />
+            <state vertical-scroll-proportion="-10.875">
+              <caret line="95" column="48" selection-start-line="95" selection-start-column="48" selection-end-line="95" selection-end-column="48" />
               <folding>
                 <element signature="e#0#29#0" expanded="true" />
               </folding>
@@ -62,32 +50,22 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Main.xml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/ExpressionlessSquare/Main.xml">
+      <file leaf-file-name="SquareGame.xml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/ExpressionlessSquare/SquareGame.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.6785714">
-              <caret line="10" column="20" selection-start-line="10" selection-start-column="20" selection-end-line="10" selection-end-column="20" />
+            <state vertical-scroll-proportion="-4.75">
+              <caret line="7" column="28" selection-start-line="0" selection-start-column="0" selection-end-line="544" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="MainShuaib.xml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/ExpressionlessSquare/MainShuaib.xml">
+      <file leaf-file-name="SquareGameShuaib.xml" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/ExpressionlessSquare/SquareGameShuaib.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="42" column="18" selection-start-line="42" selection-start-column="18" selection-end-line="42" selection-end-column="18" />
-              <folding>
-                <marker date="1457057176000" expanded="true" signature="6:931" placeholder="..." />
-                <marker date="1457057176000" expanded="true" signature="110:926" placeholder="..." />
-                <marker date="1457057176000" expanded="true" signature="255:276" placeholder="..." />
-                <marker date="1457057176000" expanded="true" signature="322:907" placeholder="..." />
-                <marker date="1457057176000" expanded="true" signature="364:528" placeholder="..." />
-                <marker date="1457057176000" expanded="true" signature="547:885" placeholder="..." />
-                <marker date="1457057176000" expanded="true" signature="570:865" placeholder="..." />
-                <marker date="1457057176000" expanded="true" signature="701:810" placeholder="..." />
-                <marker date="1457057176000" expanded="true" signature="720:786" placeholder="..." />
-              </folding>
+            <state vertical-scroll-proportion="0.08755761">
+              <caret line="3" column="9" selection-start-line="0" selection-start-column="0" selection-end-line="5" selection-end-column="8" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -114,6 +92,7 @@
         <option value="$PROJECT_DIR$/ArrayTest/MainShuaib.xml" />
         <option value="$PROJECT_DIR$/Compiler I/src/JackAnalyzer.py" />
         <option value="$PROJECT_DIR$/Compiler I/src/JackTokenizer.py" />
+        <option value="$PROJECT_DIR$/ExpressionlessSquare/MainShuaib.xml" />
         <option value="$PROJECT_DIR$/Compiler I/src/CompilationEngine.py" />
       </list>
     </option>
@@ -124,8 +103,8 @@
     <detection-done>true</detection-done>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="70" />
-    <option name="y" value="59" />
+    <option name="x" value="30" />
+    <option name="y" value="124" />
     <option name="width" value="1317" />
     <option name="height" value="791" />
   </component>
@@ -431,7 +410,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="70" y="59" width="1317" height="791" extended-state="0" />
+    <frame x="30" y="124" width="1317" height="791" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.17995444" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
@@ -440,18 +419,18 @@
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
     </layout>
     <layout-to-restore>
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -785,29 +764,29 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/ExpressionlessSquare/Main.xml">
+    <entry file="file://$PROJECT_DIR$/Compiler I/src/CompilationEngine.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.6785714">
-          <caret line="10" column="20" selection-start-line="10" selection-start-column="20" selection-end-line="10" selection-end-column="20" />
-          <folding />
+        <state vertical-scroll-proportion="-10.875">
+          <caret line="95" column="48" selection-start-line="95" selection-start-column="48" selection-end-line="95" selection-end-column="48" />
+          <folding>
+            <element signature="e#0#29#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/ExpressionlessSquare/MainShuaib.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="42" column="18" selection-start-line="42" selection-start-column="18" selection-end-line="42" selection-end-column="18" />
-          <folding>
-            <marker date="1457057176000" expanded="true" signature="6:931" placeholder="..." />
-            <marker date="1457057176000" expanded="true" signature="110:926" placeholder="..." />
-            <marker date="1457057176000" expanded="true" signature="255:276" placeholder="..." />
-            <marker date="1457057176000" expanded="true" signature="322:907" placeholder="..." />
-            <marker date="1457057176000" expanded="true" signature="364:528" placeholder="..." />
-            <marker date="1457057176000" expanded="true" signature="547:885" placeholder="..." />
-            <marker date="1457057176000" expanded="true" signature="570:865" placeholder="..." />
-            <marker date="1457057176000" expanded="true" signature="701:810" placeholder="..." />
-            <marker date="1457057176000" expanded="true" signature="720:786" placeholder="..." />
-          </folding>
+        <state vertical-scroll-proportion="0.44035345">
+          <caret line="45" column="27" selection-start-line="0" selection-start-column="0" selection-end-line="63" selection-end-column="8" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ExpressionlessSquare/Main.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.23348695">
+          <caret line="8" column="24" selection-start-line="8" selection-start-column="24" selection-end-line="8" selection-end-column="24" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -819,13 +798,19 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Compiler I/src/CompilationEngine.py">
+    <entry file="file://$PROJECT_DIR$/ExpressionlessSquare/SquareGame.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.52430046">
-          <caret line="113" column="12" selection-start-line="113" selection-start-column="12" selection-end-line="113" selection-end-column="12" />
-          <folding>
-            <element signature="e#0#29#0" expanded="true" />
-          </folding>
+        <state vertical-scroll-proportion="-4.75">
+          <caret line="7" column="28" selection-start-line="0" selection-start-column="0" selection-end-line="544" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ExpressionlessSquare/SquareGameShuaib.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.08755761">
+          <caret line="3" column="9" selection-start-line="0" selection-start-column="0" selection-end-line="5" selection-end-column="8" />
+          <folding />
         </state>
       </provider>
     </entry>
