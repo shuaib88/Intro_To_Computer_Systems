@@ -33,11 +33,42 @@ class CompilationEngine:
         self.tokenizer.advance()
         self.write(self.tokenizer.currentToken) # '{'
         self.tokenizer.advance()
+
+        while self.extractedToken() in ('static', 'field'):
+            self.compileClassVarDec()
+
         while self.extractedToken() in ('constructor', 'function', 'method'):
             self.compileSubroutine()
 
         self.write(self.tokenizer.currentToken) # writes ";"
         self.outputFile.write('</class>')
+
+    def compileClassVarDec(self):
+        self.write('<classVarDec>')
+        self.incrIndent()
+
+        self.write(self.tokenizer.currentToken) # 'static' | 'field'
+        self.tokenizer.advance()
+
+        self.write(self.tokenizer.currentToken) # type
+        self.tokenizer.advance()
+
+        self.write(self.tokenizer.currentToken) # identifier
+        self.tokenizer.advance()
+
+        #if multiple var declarations
+        while self.extractedToken() == ',':
+            self.write(self.tokenizer.currentToken) #should be ","
+            self.tokenizer.advance()
+            self.write(self.tokenizer.currentToken) #should be a varName
+            self.tokenizer.advance()
+
+        self.write(self.tokenizer.currentToken) #should be ;
+        self.tokenizer.advance()
+
+        self.decrIndent()
+        self.write('</classVarDec>')
+
 
     def compileSubroutine(self):
         self.write('<subroutineDec>')

@@ -2,9 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d96a3dd6-65e1-4548-98d5-08eb577f8f87" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/TestXML/SquareGame.jack" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/TestXML/SquareGame.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Compiler I/src/CompilationEngine.py" afterPath="$PROJECT_DIR$/Compiler I/src/CompilationEngine.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ExpressionlessSquare/MainShuaib.xml" afterPath="$PROJECT_DIR$/ExpressionlessSquare/MainShuaib.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ExpressionlessSquare/SquareGameShuaib.xml" afterPath="$PROJECT_DIR$/ExpressionlessSquare/SquareGameShuaib.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ExpressionlessSquare/SquareShuaib.xml" afterPath="$PROJECT_DIR$/ExpressionlessSquare/SquareShuaib.xml" />
     </list>
@@ -22,17 +23,37 @@
   <component name="CreatePatchCommitExecutor">
     <option name="PATCH_PATH" value="" />
   </component>
+  <component name="DockManager">
+    <window id="6">
+      <content type="file-editors">
+        <state>
+          <leaf>
+            <file leaf-file-name="SquareGame.jack" pinned="false" current-in-tab="true">
+              <entry file="file://$PROJECT_DIR$/TestXML/SquareGame.jack">
+                <provider selected="true" editor-type-id="text-editor">
+                  <state vertical-scroll-proportion="0.6156112">
+                    <caret line="22" column="13" selection-start-line="22" selection-start-column="13" selection-end-line="22" selection-end-column="13" />
+                    <folding />
+                  </state>
+                </provider>
+              </entry>
+            </file>
+          </leaf>
+        </state>
+      </content>
+    </window>
+  </component>
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FavoritesManager">
     <favorites_list name="10" />
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
-      <file leaf-file-name="CompilationEngine.py" pinned="false" current-in-tab="false">
+      <file leaf-file-name="CompilationEngine.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Compiler I/src/CompilationEngine.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-10.875">
-              <caret line="95" column="48" selection-start-line="95" selection-start-column="48" selection-end-line="95" selection-end-column="48" />
+            <state vertical-scroll-proportion="0.67697066">
+              <caret line="63" column="36" selection-start-line="63" selection-start-column="36" selection-end-line="63" selection-end-column="36" />
               <folding>
                 <element signature="e#0#29#0" expanded="true" />
               </folding>
@@ -40,31 +61,21 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Main.jack" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/ExpressionlessSquare/Main.jack">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="10" column="12" selection-start-line="10" selection-start-column="12" selection-end-line="10" selection-end-column="12" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="SquareGame.xml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/ExpressionlessSquare/SquareGame.xml">
+        <entry file="file://$PROJECT_DIR$/TestXML/SquareGame.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-4.75">
-              <caret line="7" column="28" selection-start-line="0" selection-start-column="0" selection-end-line="544" selection-end-column="0" />
+            <state vertical-scroll-proportion="-13.571428">
+              <caret line="20" column="24" selection-start-line="20" selection-start-column="24" selection-end-line="20" selection-end-column="24" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="SquareGameShuaib.xml" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/ExpressionlessSquare/SquareGameShuaib.xml">
+      <file leaf-file-name="SquareGameShuaib.xml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/TestXML/SquareGameShuaib.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.08755761">
-              <caret line="3" column="9" selection-start-line="0" selection-start-column="0" selection-end-line="5" selection-end-column="8" />
+            <state vertical-scroll-proportion="-6.285714">
+              <caret line="41" column="23" selection-start-line="0" selection-start-column="0" selection-end-line="61" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -93,6 +104,7 @@
         <option value="$PROJECT_DIR$/Compiler I/src/JackAnalyzer.py" />
         <option value="$PROJECT_DIR$/Compiler I/src/JackTokenizer.py" />
         <option value="$PROJECT_DIR$/ExpressionlessSquare/MainShuaib.xml" />
+        <option value="$PROJECT_DIR$/ExpressionlessSquare/SquareGameShuaib.xml" />
         <option value="$PROJECT_DIR$/Compiler I/src/CompilationEngine.py" />
       </list>
     </option>
@@ -103,8 +115,8 @@
     <detection-done>true</detection-done>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="30" />
-    <option name="y" value="124" />
+    <option name="x" value="9" />
+    <option name="y" value="23" />
     <option name="width" value="1317" />
     <option name="height" value="791" />
   </component>
@@ -150,6 +162,20 @@
               <option name="myItemId" value="10" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="TestXML" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="10" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="10" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
@@ -168,6 +194,7 @@
         </subPane>
       </pane>
       <pane id="Scope">
+        <subPane subId="Problems" />
         <subPane subId="Changed Files">
           <PATH>
             <PATH_ELEMENT USER_OBJECT="Root">
@@ -179,6 +206,32 @@
         <subPane subId="Default">
           <PATH>
             <PATH_ELEMENT USER_OBJECT="Root">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+          </PATH>
+        </subPane>
+        <subPane subId="Project Files">
+          <PATH>
+            <PATH_ELEMENT USER_OBJECT="Root">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT USER_OBJECT="10">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT USER_OBJECT="TestXML">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT USER_OBJECT="Root">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT USER_OBJECT="10">
               <option name="myItemId" value="" />
               <option name="myItemType" value="" />
             </PATH_ELEMENT>
@@ -196,6 +249,9 @@
     <property name="js-jscs-nodeInterpreter" value="/usr/local/bin/node" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/TestXML" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/Compiler I/src" />
       <recent name="$PROJECT_DIR$/Compiler I" />
@@ -410,7 +466,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="30" y="124" width="1317" height="791" extended-state="0" />
+    <frame x="9" y="23" width="1317" height="791" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.17995444" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
@@ -685,14 +741,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/ExpressionlessSquare/SquareGame.jack">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.67157584">
-          <caret line="24" column="13" selection-start-line="24" selection-start-column="10" selection-end-line="24" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/ArrayTest/Main.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.7980614">
@@ -748,29 +796,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/ExpressionlessSquare/Square.jack">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="1.20324">
-          <caret line="43" column="0" selection-start-line="43" selection-start-column="0" selection-end-line="43" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Square/Main.jack">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Compiler I/src/CompilationEngine.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-10.875">
-          <caret line="95" column="48" selection-start-line="95" selection-start-column="48" selection-end-line="95" selection-end-column="48" />
-          <folding>
-            <element signature="e#0#29#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -790,27 +820,85 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/ExpressionlessSquare/SquareGame.jack">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="1.2132921">
+          <caret line="43" column="24" selection-start-line="43" selection-start-column="24" selection-end-line="43" selection-end-column="24" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/ExpressionlessSquare/Main.jack">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
+        <state vertical-scroll-proportion="0.27982327">
           <caret line="10" column="12" selection-start-line="10" selection-start-column="12" selection-end-line="10" selection-end-column="12" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/ExpressionlessSquare/SquareGame.xml">
+    <entry file="file://$PROJECT_DIR$/ExpressionlessSquare/SquareShuaib.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-4.75">
-          <caret line="7" column="28" selection-start-line="0" selection-start-column="0" selection-end-line="544" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ExpressionlessSquare/Square.jack">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="1.0559647">
+          <caret line="43" column="0" selection-start-line="43" selection-start-column="0" selection-end-line="43" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/ExpressionlessSquare/SquareGameShuaib.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.08755761">
-          <caret line="3" column="9" selection-start-line="0" selection-start-column="0" selection-end-line="5" selection-end-column="8" />
+        <state vertical-scroll-proportion="0.29185867">
+          <caret line="10" column="8" selection-start-line="10" selection-start-column="8" selection-end-line="10" selection-end-column="8" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ExpressionlessSquare/SquareGame.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.116743475">
+          <caret line="4" column="14" selection-start-line="4" selection-start-column="3" selection-end-line="4" selection-end-column="14" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/TestXML/SquareGame.jack">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.6156112">
+          <caret line="22" column="13" selection-start-line="22" selection-start-column="13" selection-end-line="22" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/TestXML/SquareGameShuaib.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-6.285714">
+          <caret line="41" column="23" selection-start-line="0" selection-start-column="0" selection-end-line="61" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/TestXML/SquareGame.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-13.571428">
+          <caret line="20" column="24" selection-start-line="20" selection-start-column="24" selection-end-line="20" selection-end-column="24" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Compiler I/src/CompilationEngine.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.67697066">
+          <caret line="63" column="36" selection-start-line="63" selection-start-column="36" selection-end-line="63" selection-end-column="36" />
+          <folding>
+            <element signature="e#0#29#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
