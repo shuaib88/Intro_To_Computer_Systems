@@ -26,6 +26,7 @@ class CompilationEngine:
         # advance twice to get rid of the first tokens tag
         self.tokenizer.advance()
         self.tokenizer.advance()
+        # self.outputFile.write('<class>')
         self.outputFile.write('<class>\n')
         self.write(self.tokenizer.currentToken) # 'class'
         self.tokenizer.advance()
@@ -105,6 +106,7 @@ class CompilationEngine:
         self.advanceAndWrite() # should be {
         self.tokenizer.advance()
 
+
         while self.extractedToken() != "}":
 
             while self.extractedToken() == "var":
@@ -112,10 +114,8 @@ class CompilationEngine:
 
             self.compileStatements() # compile statements
 
-            self.write(self.tokenizer.currentToken) # writes ";"
-            self.tokenizer.advance()
-
-        #ultimately }
+        self.write(self.tokenizer.currentToken) # writes "}"
+        self.tokenizer.advance()
 
         self.decrIndent()
         self.write('</subroutineBody>')
@@ -123,6 +123,7 @@ class CompilationEngine:
     def compileStatements(self):
         self.write('<statements>')
         self.incrIndent()
+
 
         while self.extractedToken() != 'return':
 
@@ -132,9 +133,13 @@ class CompilationEngine:
             if self.extractedToken() == 'do':
                 self.compileDo()
 
+            if self.extractedToken() == 'while':
+                self.compileWhile()
+
 
         if self.extractedToken() == 'return':
             self.compileReturn()
+
 
         self.decrIndent()
         self.write('</statements>')
@@ -154,6 +159,29 @@ class CompilationEngine:
 
         self.decrIndent()
         self.write('</returnStatement>')
+
+    def compileWhile(self):
+        self.write('<whileStatement>')
+        self.incrIndent()
+
+        self.write(self.tokenizer.currentToken) # writes "while"
+        self.tokenizer.advance()
+
+        self.write(self.tokenizer.currentToken) # writes "("
+        self.tokenizer.advance()
+
+        self.compileExpression()
+
+        self.write(self.tokenizer.currentToken) # writes ")"
+        self.tokenizer.advance()
+
+        self.write(self.tokenizer.currentToken) # writes "{"
+        self.tokenizer.advance()
+
+
+        self.decrIndent()
+        self.write('</whileStatement>')
+
 
     def compileDo(self):
         self.write('<doStatement>')
@@ -186,10 +214,11 @@ class CompilationEngine:
         self.incrIndent()
 
         # will fill this out when have more expressions
+        while self.extractedToken() != ")":
+            self.compileExpression()
 
         self.decrIndent()
         self.write('</expressionList>')
-        pass
 
     def compileLet(self):
         self.write('<letStatement>')
@@ -246,6 +275,7 @@ class CompilationEngine:
         self.write('</term>')
 
     def compileVarDec(self):
+
         self.write('<varDec>')
         self.incrIndent()
 
@@ -253,6 +283,7 @@ class CompilationEngine:
         self.advanceAndWrite() # should write type
         self.advanceAndWrite() # should write varName
         self.tokenizer.advance()
+
 
         #if multiple var declarations
         while self.extractedToken() == ',':
@@ -277,6 +308,7 @@ class CompilationEngine:
         self.write(self.tokenizer.currentToken)
 
     def write(self,string):
+        # self.outputFile.write('  ' * self.indent + string )
         self.outputFile.write('  ' * self.indent + string + '\n')
 
     # increments the tabbing
