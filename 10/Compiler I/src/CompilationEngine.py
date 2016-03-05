@@ -96,8 +96,11 @@ class CompilationEngine:
         self.tokenizer.advance()
         #parameters
         while self.extractedToken() != ")":
-            self.write(self.extractedToken())
+            self.write(self.tokenizer.currentToken)
             self.tokenizer.advance()
+            if self.extractedToken() == ",":
+                self.write(self.tokenizer.currentToken)
+                self.tokenizer.advance()
 
         self.decrIndent()
         self.write('</parameterList>')
@@ -256,7 +259,12 @@ class CompilationEngine:
 
         # will fill this out when have more expressions
         while self.extractedToken() != ")":
-            self.compileExpression()
+
+            self.compileExpression() # should write expression
+
+            if self.extractedToken() == ",": # should write "," if there are more expressions
+                self.write(self.tokenizer.currentToken)
+                self.tokenizer.advance()
 
         self.decrIndent()
         self.write('</expressionList>')
