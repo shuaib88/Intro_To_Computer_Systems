@@ -4,6 +4,8 @@ import re
 
 betweenMarkers = r'(?:\> (.*) \<)'
 
+statements = ['let', 'do', 'while', 'if']
+
 class CompilationEngine:
 
 
@@ -112,7 +114,8 @@ class CompilationEngine:
             while self.extractedToken() == "var":
                 self.compileVarDec()  # varDec* statements
 
-            self.compileStatements() # compile statements
+            while self.extractedToken() in statements:
+                self.compileStatements() # compile statements
 
         self.write(self.tokenizer.currentToken) # writes "}"
         self.tokenizer.advance()
@@ -125,16 +128,19 @@ class CompilationEngine:
         self.incrIndent()
 
 
-        while self.extractedToken() != 'return':
+        while self.extractedToken() in statements:
 
             if self.extractedToken() == 'let':
                 self.compileLet()
 
-            if self.extractedToken() == 'do':
+            elif self.extractedToken() == 'do':
                 self.compileDo()
 
-            if self.extractedToken() == 'while':
+            elif self.extractedToken() == 'while':
                 self.compileWhile()
+
+            elif self.extractedToken() == 'if':
+                self.compileIf()
 
 
         if self.extractedToken() == 'return':
@@ -143,6 +149,35 @@ class CompilationEngine:
 
         self.decrIndent()
         self.write('</statements>')
+
+    def compileIf(self):
+        self.write('<ifStatement>')
+        self.incrIndent()
+
+        self.write(self.tokenizer.currentToken) # writes "if"
+        self.tokenizer.advance()
+
+        self.write(self.tokenizer.currentToken) # writes "("
+        self.tokenizer.advance()
+
+        self.compileExpression()
+
+        self.write(self.tokenizer.currentToken) # writes ")"
+        self.tokenizer.advance()
+
+        self.write(self.tokenizer.currentToken) # writes "{"
+        self.tokenizer.advance()
+
+        # need statements
+        self.compileStatements()
+
+        # need close bracket
+        self.write(self.tokenizer.currentToken) # writes "}"
+        self.tokenizer.advance()
+
+        self.decrIndent()
+        self.write('</ifStatement>')
+
 
     def compileReturn(self):
         self.write('<returnStatement>')
@@ -178,6 +213,12 @@ class CompilationEngine:
         self.write(self.tokenizer.currentToken) # writes "{"
         self.tokenizer.advance()
 
+        # need statements
+        self.compileStatements()
+
+        # need close bracket
+        self.write(self.tokenizer.currentToken) # writes "}"
+        self.tokenizer.advance()
 
         self.decrIndent()
         self.write('</whileStatement>')
