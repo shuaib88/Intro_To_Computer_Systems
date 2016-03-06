@@ -73,12 +73,6 @@ class JackTokenizer:
     def advance(self):
         self.currentToken = self.tokens.pop(0) # pops off first token in array
 
-    # def keyWord(self):
-    #     #translate current token to extract the little part
-    #
-    #     if self.tokenType() == 'KEYWORD':
-    #         # return the actual keyword
-
 
 
 

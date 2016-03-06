@@ -3,7 +3,7 @@ import re
 
 
 betweenMarkers = r'(?:\> (.*) \<)'
-
+operation = ['+','-','*','/','&amp;','|','&lt;','&gt;','=']
 statements = ['let', 'do', 'while', 'if']
 
 class CompilationEngine:
@@ -28,7 +28,6 @@ class CompilationEngine:
         # advance twice to get rid of the first tokens tag
         self.tokenizer.advance()
         self.tokenizer.advance()
-        # self.outputFile.write('<class>')
         self.outputFile.write('<class>\n')
         self.write(self.tokenizer.currentToken) # 'class'
         self.tokenizer.advance()
@@ -306,9 +305,11 @@ class CompilationEngine:
         self.write('<expression>')
         self.incrIndent()
 
+        self.compileTerm() # writes first term
 
-        self.compileTerm() # currently writes term
-        # self.tokenizer.advance()
+        while self.extractedToken() in operation:
+            self.writeAndAdvance() # writes operation
+            self.compileTerm()
 
         self.decrIndent()
         self.write('</expression>')
@@ -317,11 +318,49 @@ class CompilationEngine:
         self.write('<term>')
         self.incrIndent()
 
-        self.write(self.tokenizer.currentToken) # writes term
-        self.tokenizer.advance()
+        #checks for appropriate term time
+
+        if self.extractedToken() == "(":
+            self.writeAndAdvance() # write "("
+            self.compileExpression()
+            self.writeAndAdvance() # write ")"
+
+        elif self.extractedToken() in ["-", "~"]:
+            self.writeAndAdvance() # write unaryOperator
+            self.compileTerm() #write term
+
+        elif self.lookahead() in [".", "("]:
+            self.compileSubroutineCall()
+
+        elif self.lookahead() == "[":
+            self.writeAndAdvance() # varName
+            self.writeAndAdvance() # write "["
+            self.compileExpression()
+            self.writeAndAdvance() # write "]"
+
+        else:
+            #ELSE SIMPLE (MAYBE CHECK) - token type [IntConst, str-const, keyword, Identifier or Unary OP
+                ## integerConstant | stringConstant | keywordConstant | varName | | unaryOp term
+            self.writeAndAdvance() # should print one of the above
 
         self.decrIndent()
         self.write('</term>')
+
+    def compileSubroutineCall(self):
+
+        if self.lookahead() == ".": #
+            self.writeAndAdvance() # write className | varName
+            self.writeAndAdvance() # write "."
+            self.writeAndAdvance() # write subroutineName
+            self.writeAndAdvance() # write "("
+            self.compileExpressionList()
+            self.writeAndAdvance() # write ")"
+
+        elif self.lookahead() == "(":
+            self.writeAndAdvance() # write subroutineName
+            self.writeAndAdvance() # write "("
+            self.compileExpressionList()
+            self.writeAndAdvance() # write ")"
 
     def compileVarDec(self):
 
@@ -347,6 +386,11 @@ class CompilationEngine:
         self.decrIndent()
         self.write('</varDec>')
 
+    def lookahead(self):
+        nextToken = self.tokenizer.tokens[0] # full token with tags
+        extractedToken = re.findall(betweenMarkers, nextToken)[0]
+        return extractedToken
+
     def extractedToken(self):
         token = self.tokenizer.currentToken
         extractedToken = re.findall(betweenMarkers, token)[0]
@@ -355,6 +399,10 @@ class CompilationEngine:
     def advanceAndWrite(self):
         self.tokenizer.advance()
         self.write(self.tokenizer.currentToken)
+
+    def writeAndAdvance(self):
+        self.write(self.tokenizer.currentToken)
+        self.tokenizer.advance()
 
     def write(self,string):
         # self.outputFile.write('  ' * self.indent + string )
