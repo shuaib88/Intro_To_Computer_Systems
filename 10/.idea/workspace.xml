@@ -2,18 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d96a3dd6-65e1-4548-98d5-08eb577f8f87" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Compiler I.zip" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/TestXML/Square.jack" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/TestXML/Square.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/TestXML/SquareShuaib.xml" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ArrayTest/MainShuaib.xml" afterPath="$PROJECT_DIR$/ArrayTest/MainShuaib.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Compiler I/README.txt" afterPath="$PROJECT_DIR$/Compiler I/README.txt" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Compiler I/src/CompilationEngine.py" afterPath="$PROJECT_DIR$/Compiler I/src/CompilationEngine.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Compiler I/src/JackTokenizer.py" afterPath="$PROJECT_DIR$/Compiler I/src/JackTokenizer.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Square/MainShuaib.xml" afterPath="$PROJECT_DIR$/Square/MainShuaib.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Square/SquareGameShuaib.xml" afterPath="$PROJECT_DIR$/Square/SquareGameShuaib.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Square/SquareShuaib.xml" afterPath="$PROJECT_DIR$/Square/SquareShuaib.xml" />
     </list>
     <ignored path="10.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -38,11 +28,41 @@
       <file leaf-file-name="CompilationEngine.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Compiler I/src/CompilationEngine.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-224.4375">
-              <caret line="378" column="36" selection-start-line="378" selection-start-column="36" selection-end-line="378" selection-end-column="36" />
+            <state vertical-scroll-proportion="-101.333336">
+              <caret line="336" column="0" selection-start-line="336" selection-start-column="0" selection-end-line="336" selection-end-column="0" />
               <folding>
                 <element signature="e#0#29#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="SquareGameShuaib.xml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Square/SquareGameShuaib.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-6.785714">
+              <caret line="10" column="15" selection-start-line="0" selection-start-column="0" selection-end-line="642" selection-end-column="8" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="SquareGame.jack" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Square/SquareGame.jack">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="SquareGame.xml" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Square/SquareGame.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.395574">
+              <caret line="626" column="24" selection-start-line="626" selection-start-column="24" selection-end-line="626" selection-end-column="24" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -57,11 +77,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="README.txt" pinned="false" current-in-tab="true">
+      <file leaf-file-name="README.txt" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Compiler I/README.txt">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.075898804">
-              <caret line="3" column="57" selection-start-line="3" selection-start-column="57" selection-end-line="3" selection-end-column="57" />
+            <state vertical-scroll-proportion="0.0">
+              <caret line="15" column="56" selection-start-line="15" selection-start-column="56" selection-end-line="15" selection-end-column="56" />
               <folding />
             </state>
           </provider>
@@ -91,9 +111,9 @@
         <option value="$PROJECT_DIR$/ExpressionlessSquare/MainShuaib.xml" />
         <option value="$PROJECT_DIR$/ExpressionlessSquare/SquareGameShuaib.xml" />
         <option value="$PROJECT_DIR$/TestXML/SquareGameShuaib.xml" />
-        <option value="$PROJECT_DIR$/Compiler I/src/CompilationEngine.py" />
         <option value="$PROJECT_DIR$/Compiler I/src/JackTokenizer.py" />
         <option value="$PROJECT_DIR$/Compiler I/README.txt" />
+        <option value="$PROJECT_DIR$/Compiler I/src/CompilationEngine.py" />
       </list>
     </option>
   </component>
@@ -199,38 +219,6 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="10" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="10" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Compiler I" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="10" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="10" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Compiler I" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
         </subPane>
       </pane>
     </panes>
@@ -239,6 +227,8 @@
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../08" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="js-jscs-nodeInterpreter" value="/usr/local/bin/node" />
+    <property name="settings.editor.selected.configurable" value="preferences.keymap" />
+    <property name="settings.editor.splitter.proportion" value="0.2" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
@@ -459,9 +449,9 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="72" y="57" width="1317" height="863" extended-state="0" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.17995444" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.17995444" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -760,14 +750,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Square/SquareGame.jack">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Square/Main.jack">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -840,32 +822,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Square/SquareGameShuaib.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.3153527">
-          <caret line="12" column="28" selection-start-line="12" selection-start-column="28" selection-end-line="12" selection-end-column="28" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Square/SquareGame.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.28907332">
-          <caret line="11" column="16" selection-start-line="0" selection-start-column="0" selection-end-line="643" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Compiler I/src/CompilationEngine.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-224.4375">
-          <caret line="378" column="36" selection-start-line="378" selection-start-column="36" selection-end-line="378" selection-end-column="36" />
-          <folding>
-            <element signature="e#0#29#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Compiler I/src/JackTokenizer.py">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -876,8 +832,42 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Compiler I/README.txt">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.075898804">
-          <caret line="3" column="57" selection-start-line="3" selection-start-column="57" selection-end-line="3" selection-end-column="57" />
+        <state vertical-scroll-proportion="0.0">
+          <caret line="15" column="56" selection-start-line="15" selection-start-column="56" selection-end-line="15" selection-end-column="56" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Compiler I/src/CompilationEngine.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-101.333336">
+          <caret line="336" column="0" selection-start-line="336" selection-start-column="0" selection-end-line="336" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#29#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Square/SquareGameShuaib.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-6.785714">
+          <caret line="10" column="15" selection-start-line="0" selection-start-column="0" selection-end-line="642" selection-end-column="8" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Square/SquareGame.jack">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Square/SquareGame.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.395574">
+          <caret line="626" column="24" selection-start-line="626" selection-start-column="24" selection-end-line="626" selection-end-column="24" />
           <folding />
         </state>
       </provider>
